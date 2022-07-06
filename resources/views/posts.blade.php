@@ -1,12 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HIMATIF | Blog</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HIMATIF | Blog</title>
+
+  <meta name="description" content="">
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="HIMATIF | Blog" />
+  <meta property="og:image" content="img/logo.png" />
+  <meta property="og:description" content="" />
+
+  <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Developed By: IPTEK HIMATIF UNIMAL 2022
+  * Frontend Develop By: Fajar Rivaldi Chan
+  * Backend Develop By: Muhammad Bayu Juhri, M. Akbar Husain, Kairul Akram, Gilang Ramadhan Purba
+  ======================================================== -->
 </head>
+
 <body>
-    <h1>Halaman Blog</h1>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo"><img src="img/logo4.png" alt="Logo"></a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="sejarah.html">Sejarah</a></li>
+              <li class="dropdown"><a href="#"><span>Kepengurusan</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="divisi.html">Teras</a></li>
+                  <li><a href="divisi.html">Administrasi</a></li>
+                  <li><a href="divisi.html">Agama</a></li>
+                  <li><a href="divisi.html">Kaderisasi</a></li>
+                  <li><a href="divisi.html">Humas</a></li>
+                  <li><a href="divisi.html">Kewirausahaan</a></li>
+                  <li><a href="divisi.html">Iptek</a></li>
+                  <li><a href="divisi.html">Jurnalistik</a></li>
+                  <li><a href="divisi.html">Medikom</a></li>
+                  <li><a href="divisi.html">Minat Bakat</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="toko.html">Shop</a></li>
+          <li><a class="nav-link" href="event.html">Event</a></li>
+          <li><a class="nav-link " href="prestasi.html">Prestasi</a></li>
+          <li><a class="nav-link" href="galeri.html">Galeri</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog</h2>
+          <ol>
+            <li>Home</li>
+            <li>Blog</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <div class="section-title">
+          <h2>Blog</h2>
+          <p>Berita & Artikel</p>
+          <!-- <p>Kategori : Artikel</p> -->
+          <!-- <p>Tags : Teknologi</p> -->
+          <!-- <p>Search : test</p> -->
+        </div>
+        <div class="row justify-content-center">
+
+          <div class="search col-lg-10 my-4 pb-4">
+            <form action="" method="post">
+              <div class="input-group">
+                <input type="text" class="form-control form-control-lg" aria-label="Text input with dropdown button" placeholder="Mau Cari Apa ? ">
+                <div class="input-group-append">
+                  <button class="btn btn-success " type="button"><i class="bi bi-search"></i> Search</button>
+                </div>
+            </div>
+            </form>
+          </div>
+
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+          
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+
+          <div class="col-lg-4 col-md-6 entries">
+            <article class="entry">
+              <div class="entry-img">
+                <img src="img/contoh.jpg" alt="" class="img-fluid">
+              </div>
+              <h2 class="entry-title">
+                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                </ul>
+              </div>
+              <div class="entry-content">
+                <p>
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+              </div>
+            </article><!-- End blog entry -->
+          </div>
+
+        </div><!-- End blog entries list -->
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="...">
+              <ul class="pagination  justify-content-center justify-content-lg-start">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-12 col-12 footer-contact mt-auto mb-auto">
+            <img src="img/logo4.png" width="200" alt="Logo">
+            <p class="pt-4">HIMATIF adalah sebuah organisasi mahasiswa Teknik Informatika, Fakultas Teknik, Universitas Malikussaleh.</p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-6 footer-links">
+            <h4>Main Menu</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="sejarah.html">Sejarah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="event.html">Event</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="prestasi.html">Prestasi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="galeri.html">Galeri</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="toko.html">Himatif Shop</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">LMS Himatif</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://ikatif.unimal.ac.id">Ikatif</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://permikomnas.or.id">Permikomnas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://informatika.unimal.ac.id">Teknik Informatika</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://unimal.ac.id">Universitas Malikussaleh</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 col-12 footer-links">
+            <h4>Sekretariat</h4>
+            <p>Jalan Batam, Kampus Bukit Indah
+              Lantai II Gedung Teknik Informatika
+              Lhokseumawe, Indonesia </p>
+              <div class="sosmed pt-3">
+                <a href="" class="p-2"><i class="bi bi-facebook"></i></a>
+                <a href="" class="p-2"><i class="bi bi-instagram"></i></a>
+                <a href="" class="p-2"><i class="bi bi-youtube"></i></a>
+                <a href="" class="p-2"><i class="bi bi-tiktok"></i></a>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright text-white">
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>
+        &copy; Copyright <strong><span>HIMATIF</span></strong>. Created With <i class="bi bi-heart-fill text-danger"></i> By <strong><span>IPTEK 2022</span></strong>.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top btn btn-success d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>

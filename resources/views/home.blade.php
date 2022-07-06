@@ -36,10 +36,10 @@
       <a href="index.html" class="logo"><img src="img/logo4.png" alt="Logo"></a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="index.html">Home</a></li>
+          <li><a class="nav-link active" href="/">Home</a></li>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="sejarah.html">Sejarah</a></li>
+              <li><a href="/sejarah">Sejarah</a></li>
               <li class="dropdown"><a href="#"><span>Kepengurusan</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="divisi.html">Teras</a></li>
@@ -56,7 +56,7 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link" href="blog.html">Blog</a></li>
+          <li><a class="nav-link" href="/blog">Blog</a></li>
           <li><a class="nav-link" href="toko.html">Shop</a></li>
           <li><a class="nav-link" href="event.html">Event</a></li>
           <li><a class="nav-link " href="prestasi.html">Prestasi</a></li>
