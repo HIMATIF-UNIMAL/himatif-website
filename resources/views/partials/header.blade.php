@@ -4,8 +4,8 @@
       <a href="/" class="logo"><img src="img/logo4.png" alt="Logo"></a>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link active" href="/">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link {{ ($title === 'Home') ? 'active' : '' }}" href="/">Home</a></li>
+          <li class="dropdown {{ ($title === 'Sejarah' || $title === 'Divisi') ? 'active' : '' }}"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/sejarah">Sejarah</a></li>
               <li class="dropdown"><a href="#"><span>Kepengurusan</span> <i class="bi bi-chevron-right"></i></a>
@@ -24,11 +24,11 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link" href="/blog">Blog</a></li>
-          <li><a class="nav-link" href="/toko">Shop</a></li>
-          <li><a class="nav-link" href="/events">Event</a></li>
-          <li><a class="nav-link " href="/prestasi">Prestasi</a></li>
-          <li><a class="nav-link" href="/galeri">Galeri</a></li>
+          <li><a class="nav-link {{ ($title === 'Blog') ? 'active' : '' }}" href="/blog">Blog</a></li>
+          <li><a class="nav-link {{ ($title === 'Toko') ? 'active' : '' }}" href="/toko">Shop</a></li>
+          <li><a class="nav-link {{ ($title === 'Events') ? 'active' : '' }}" href="/events">Event</a></li>
+          <li><a class="nav-link {{ ($title === 'Prestasi') ? 'active' : '' }}" href="/prestasi">Prestasi</a></li>
+          <li><a class="nav-link {{ ($title === 'Galeri') ? 'active' : '' }}" href="/galeri">Galeri</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
