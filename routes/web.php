@@ -48,14 +48,74 @@ Route::get('/divisi', function () {
 });
 
 Route::get('/blog', function () {
+
+    $blog_posts = [
+        [
+            'title' => "Blog Post 1",
+            'slug' => "blog-post-1",
+            "author" => "Bayu",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ],
+        [
+            'title' => "Blog Post 2",
+            'slug' => "blog-post-2",
+            "author" => "Fajar",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ],
+        [
+            'title' => "Blog Post 3",
+            'slug' => "blog-post-3",
+            "author" => "Akbar",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ]
+    ];
+
     return view('posts', [
         'title' => 'Blog',
+        'posts' => $blog_posts
+    ]);
+});
+
+Route::get('blog/{slug}', function ($slug) {
+
+    $blog_posts = [
+        [
+            'title' => "Blog Post 1",
+            'slug' => "blog-post-1",
+            "author" => "Bayu",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ],
+        [
+            'title' => "Blog Post 2",
+            'slug' => "blog-post-2",
+            "author" => "Fajar",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ],
+        [
+            'title' => "Blog Post 3",
+            'slug' => "blog-post-3",
+            "author" => "Akbar",
+            "body" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, temporibus, atque, doloremque, officiis, in, libero, quae, dolore, vero, provident, possimus, quod!",
+        ]
+    ];
+
+    $new_post = [];
+    foreach ($blog_posts as $post) {
+        if ($post['slug'] === $slug) {
+            $new_post = $post;
+        }
+    }
+
+    return view('post', [
+        'title' => 'Single Post',
+        'post' => $new_post
     ]);
 });
 
 Route::get('/toko', function () {
     return view('toko', [
         'title' => 'Toko',
+        ''
     ]);
 });
 

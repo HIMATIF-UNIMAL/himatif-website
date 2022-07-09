@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <!-- ======= Breadcrumbs ======= -->
+<!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs">
       <div class="container">
 
@@ -24,15 +24,15 @@
           <div class="col-lg-9 accordion-body">
             <article class="entry">
               <div class="entry-img">
-                <img src="assets/img/contoh.jpg" alt="" class="img-fluid">
+                <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
               </div>
               <div class="my-5 px-lg-5">
                 <h2 class="judul">
-                  Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia
+                  {{ $post['title'] }}
                 </h2>
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post['author'] }}</a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
                   </ul>
@@ -40,41 +40,9 @@
               </div>
               <div class="entry-content pb-3 px-lg-5">
                 <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                  {{ $post['body'] }}
                 </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident libero accusamus iste harum in odit, vitae nobis labore odio voluptas quae officia aperiam temporibus. Natus delectus quos ducimus sit quae?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum commodi quisquam molestiae reiciendis ipsam quidem exercitationem error ratione voluptas, assumenda molestias excepturi sunt, perferendis quasi quos mollitia, doloremque quam ipsum?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error rerum nisi, laudantium recusandae officia, inventore laborum dignissimos voluptatibus quam sint architecto commodi veniam optio quae libero corrupti, animi quaerat?
-                </p>
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident libero accusamus iste harum in odit, vitae nobis labore odio voluptas quae officia aperiam temporibus. Natus delectus quos ducimus sit quae?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum commodi quisquam molestiae reiciendis ipsam quidem exercitationem error ratione voluptas, assumenda molestias excepturi sunt, perferendis quasi quos mollitia, doloremque quam ipsum?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error rerum nisi, laudantium recusandae officia, inventore laborum dignissimos voluptatibus quam sint architecto commodi veniam optio quae libero corrupti, animi quaerat?
-                </p>
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident libero accusamus iste harum in odit, vitae nobis labore odio voluptas quae officia aperiam temporibus. Natus delectus quos ducimus sit quae?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum commodi quisquam molestiae reiciendis ipsam quidem exercitationem error ratione voluptas, assumenda molestias excepturi sunt, perferendis quasi quos mollitia, doloremque quam ipsum?
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex error rerum nisi, laudantium recusandae officia, inventore laborum dignissimos voluptatibus quam sint architecto commodi veniam optio quae libero corrupti, animi quaerat?
-                </p>
+                
                 <div class="tag">
                   <i class="bi bi-tags"></i>Tags:
                   <a href="" class="bg-light mx-1">#tech</a>  
@@ -111,7 +79,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-1 p-2">
-                            <img src="assets/img/user.svg" alt="user">
+                            <img src="{{ url('img/user.svg') }}" alt="user">
                         </div>
                         <div class="col-md-11 ">
                             <h4>Rektor Unimal</h4>
@@ -125,7 +93,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-1 p-2">
-                            <img src="assets/img/user.svg" alt="user">
+                            <img src="{{ url('img/user.svg') }}" alt="user">
                         </div>
                         <div class="col-md-11">
                             <h4>Kepala Jurusan</h4>
@@ -166,5 +134,5 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>  
 @endsection

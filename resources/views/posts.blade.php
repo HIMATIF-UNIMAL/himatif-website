@@ -39,143 +39,30 @@
             </form>
           </div>
 
+          @foreach($posts as $post)
           <div class="col-lg-4 col-md-6 entries">
             <article class="entry">
               <div class="entry-img">
                 <img src="img/contoh.jpg" alt="" class="img-fluid">
               </div>
               <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                <a href="/blog/{{ $post['slug'] }}">{{ $post['title'] }}</a>
               </h2>
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post['author'] }}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
                 </ul>
               </div>
               <div class="entry-content">
                 <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                  {{ $post['body'] }}
                 </p>
               </div>
             </article><!-- End blog entry -->
           </div>
-          
-          <div class="col-lg-4 col-md-6 entries">
-            <article class="entry">
-              <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-              </h2>
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
-                </ul>
-              </div>
-              <div class="entry-content">
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-              </div>
-            </article><!-- End blog entry -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 entries">
-            <article class="entry">
-              <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-              </h2>
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
-                </ul>
-              </div>
-              <div class="entry-content">
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-              </div>
-            </article><!-- End blog entry -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 entries">
-            <article class="entry">
-              <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-              </h2>
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
-                </ul>
-              </div>
-              <div class="entry-content">
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-              </div>
-            </article><!-- End blog entry -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 entries">
-            <article class="entry">
-              <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-              </h2>
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
-                </ul>
-              </div>
-              <div class="entry-content">
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-              </div>
-            </article><!-- End blog entry -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 entries">
-            <article class="entry">
-              <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
-              </div>
-              <h2 class="entry-title">
-                <a href="blog-detail.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-              </h2>
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
-                </ul>
-              </div>
-              <div class="entry-content">
-                <p>
-                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                </p>
-              </div>
-            </article><!-- End blog entry -->
-          </div>
+          @endforeach
 
         </div><!-- End blog entries list -->
         <div class="row">

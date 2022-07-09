@@ -1,4 +1,4 @@
-  <!-- ======= Footer ======= -->
+<!-- ======= Footer ======= -->
   <footer id="footer">
 
     <div class="footer-top">
@@ -6,19 +6,19 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-12 col-12 footer-contact mt-auto mb-auto">
-            <img src="img/logo4.png" width="200" alt="Logo">
+            <img src="{{ url('img/logo4.png') }}" width="200" alt="Logo">
             <p class="pt-4">HIMATIF adalah sebuah organisasi mahasiswa Teknik Informatika, Fakultas Teknik, Universitas Malikussaleh.</p>
           </div>
 
           <div class="col-lg-2 col-md-6 col-6 footer-links">
             <h4>Main Menu</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="sejarah.html">Sejarah</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="event.html">Event</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="prestasi.html">Prestasi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="galeri.html">Galeri</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/sejarah">Sejarah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/event">Event</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/prestasi">Prestasi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/galeri">Galeri</a></li>
             </ul>
           </div>
 

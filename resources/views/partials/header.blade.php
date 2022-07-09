@@ -1,7 +1,7 @@
-  <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="/" class="logo"><img src="img/logo4.png" alt="Logo"></a>
+      <a href="/" class="logo"><img src="{{ url('img/logo4.png') }}" alt="Logo"></a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link {{ ($title === 'Home') ? 'active' : '' }}" href="/">Home</a></li>
