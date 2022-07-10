@@ -10,16 +10,16 @@
               <li><a href="/sejarah">Sejarah</a></li>
               <li class="dropdown"><a href="#"><span>Kepengurusan</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="/divisi">Teras</a></li>
-                  <li><a href="/divisi">Administrasi</a></li>
-                  <li><a href="/divisi">Agama</a></li>
-                  <li><a href="/divisi">Kaderisasi</a></li>
-                  <li><a href="/divisi">Humas</a></li>
-                  <li><a href="/divisi">Kewirausahaan</a></li>
-                  <li><a href="/divisi">Iptek</a></li>
-                  <li><a href="/divisi">Jurnalistik</a></li>
-                  <li><a href="/divisi">Medikom</a></li>
-                  <li><a href="/divisi">Minat Bakat</a></li>
+                  <li><a href="/divisi/teras">Teras</a></li>
+                  <li><a href="/divisi/adm">Administrasi</a></li>
+                  <li><a href="/divisi/agama">Agama</a></li>
+                  <li><a href="/divisi/kaderisasi">Kaderisasi</a></li>
+                  <li><a href="/divisi/humas">Humas</a></li>
+                  <li><a href="/divisi/kwh">Kewirausahaan</a></li>
+                  <li><a href="/divisi/iptek">Iptek</a></li>
+                  <li><a href="/divisi/jurnal">Jurnalistik</a></li>
+                  <li><a href="/divisi/medikom">Medikom</a></li>
+                  <li><a href="/divisi/bakat">Minat Bakat</a></li>
                 </ul>
               </li>
             </ul>

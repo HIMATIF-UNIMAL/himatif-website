@@ -22,65 +22,23 @@
 
       <div class="section-title">
         <h2>Pengurus</h2>
-        <p>Divisi Iptek</p>
+        <p>Divisi {{ $nama_divisi }}</p>
       </div>
 
       <div class="row content justify-content-center">
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+        @foreach ($divisi as $d)
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
           <div class="pengurus">
             <div class="pengurus-img">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <img src='{{ url('img/foto-pengurus/'.$d["foto"]) }}' class="img-fluid" alt="">
             </div>
             <div class="pengurus-info">
-              <h4>Muhammad Bayu Juhri</h4>
-              <span>Ketua</span>
+              <h4>{{ $d["nama"] }}</h4>
+              <span>{{ $d["jabatan"] }}</span>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="pengurus">
-            <div class="pengurus-img">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="pengurus-info">
-              <h4>Gilang Ramadhan Purba</h4>
-              <span>Wakil Ketua</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="pengurus">
-            <div class="pengurus-img">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="pengurus-info">
-              <h4>M. Akbar Husain</h4>
-              <span>Anggota</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="pengurus">
-            <div class="pengurus-img">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="pengurus-info">
-              <h4>Khairul Akram</h4>
-              <span>Anggota</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-          <div class="pengurus">
-            <div class="pengurus-img">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="pengurus-info">
-              <h4>Fajar Rivaldi Chan</h4>
-              <span>Anggota</span>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section><!-- End Pengurus Section -->

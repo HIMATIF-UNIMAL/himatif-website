@@ -73,94 +73,20 @@
     </div>
 
     <div class="row content">
+      @foreach ($divisi as $d)
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
         <div class="pengurus">
           <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
+            <img src="{{ url('img/foto-pengurus/'.$d["foto"]) }}" class="img-fluid" alt="">
           </div>
           <div class="pengurus-info">
-            <h4>Muhammad Iqbal</h4>
-            <span>Ketua</span>
+            <h4>{{ $d["nama"] }}</h4>
+            <span>{{ $d["jabatan"] }}</span>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Muhammad Ridha</h4>
-            <span>Wakil Ketua</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Al Munawar</h4>
-            <span>Sekretaris Umum</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Lisa Uliana</h4>
-            <span>Bendahara Umum</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Alif Hafif</h4>
-            <span>Koordinator internal</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Ade Bagus Wardana</h4>
-            <span>Wakil Koordinator Internal</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Shahlan</h4>
-            <span>Koordinator Eksternal</span>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-        <div class="pengurus">
-          <div class="pengurus-img">
-            <img src="img/team-4.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="pengurus-info">
-            <h4>Anindya Hilmi Pradipta</h4>
-            <span>Wakil Koordinator Eksternal</span>
-          </div>
-        </div>
-      </div>
+      @endforeach
+
     </div>
   </div>
 </section><!-- End teras Section -->
