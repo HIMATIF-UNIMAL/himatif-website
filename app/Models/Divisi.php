@@ -135,6 +135,12 @@ class Divisi
             "foto" => "brucel.gif",
             "divisi" => "kaderisasi",
         ],
+        [
+            "nama" => "Rizki Fadhilah Ramadhani",
+            "jabatan" => "Anggota",
+            "foto" => "fadhillah.gif",
+            "divisi" => "kaderisasi",
+        ],
 
         // minat & bakat
         [

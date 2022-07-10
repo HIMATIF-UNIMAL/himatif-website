@@ -103,47 +103,47 @@
       <div class="row content">
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">ADMINISTRASI DAN KESEKETARIATAN</a></h4>
+            <h4 class="title"><a href="/divisi/adm">ADMINISTRASI DAN KESEKETARIATAN</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">AGAMA DAN SOSIAL</a></h4>
+            <h4 class="title"><a href="/divisi/agama">AGAMA DAN SOSIAL</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">PENGEMBANGAN ORGANISASI DAN KADERISASI</a></h4>
+            <h4 class="title"><a href="/divisi/kaderisasi">PENGEMBANGAN ORGANISASI DAN KADERISASI</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">HUBUNGAN MASYARAKAT</a></h4>
+            <h4 class="title"><a href="/divisi/humas">HUBUNGAN MASYARAKAT</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">KEWIRAUSAHAAN</a></h4>
+            <h4 class="title"><a href="/divisi/kwh">KEWIRAUSAHAAN</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">KAJIAN ILMIAH DAN IPTEK</a></h4>
+            <h4 class="title"><a href="/divisi/iptek">KAJIAN ILMIAH DAN IPTEK</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">JURNALISTIK </a></h4>
+            <h4 class="title"><a href="/divisi/jurnal">JURNALISTIK </a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">MEDIA INFORMASI DAN KOMUNIKASI</a></h4>
+            <h4 class="title"><a href="/divisi/medikom">MEDIA INFORMASI DAN KOMUNIKASI</a></h4>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-3 mb-lg-4">
           <div class="icon-box">
-            <h4 class="title"><a href="divisi.html">MINAT DAN BAKAT</a></h4>
+            <h4 class="title"><a href="/divisi/bakat">MINAT DAN BAKAT</a></h4>
           </div>
         </div>
       </div>
