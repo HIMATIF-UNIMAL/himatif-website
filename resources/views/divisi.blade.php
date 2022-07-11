@@ -22,7 +22,7 @@
 
       <div class="section-title">
         <h2>Pengurus</h2>
-        <p>Divisi {{ $nama_divisi }}</p>
+        <p>{{ $nama_divisi }}</p>
       </div>
 
       <div class="row content justify-content-center">

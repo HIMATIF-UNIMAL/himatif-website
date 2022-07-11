@@ -25,7 +25,7 @@
           <div class="col-lg-3 col-md-6 col-6 footer-links">
             <h4>Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="toko.html">Himatif Shop</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/toko">Himatif Shop</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">LMS Himatif</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="http://ikatif.unimal.ac.id">Ikatif</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="http://permikomnas.or.id">Permikomnas</a></li>
@@ -40,10 +40,10 @@
               Lantai II Gedung Teknik Informatika
               Lhokseumawe, Indonesia </p>
               <div class="sosmed pt-3">
-                <a href="" class="p-2"><i class="bi bi-facebook"></i></a>
-                <a href="" class="p-2"><i class="bi bi-instagram"></i></a>
-                <a href="" class="p-2"><i class="bi bi-youtube"></i></a>
-                <a href="" class="p-2"><i class="bi bi-tiktok"></i></a>
+                <a href="#" class="p-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="p-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="p-2"><i class="bi bi-youtube"></i></a>
+                <a href="#" class="p-2"><i class="bi bi-tiktok"></i></a>
               </div>
           </div>
 
