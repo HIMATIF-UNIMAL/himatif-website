@@ -28,7 +28,7 @@
               </div>
               <div class="my-5 px-lg-5">
                 <h2 class="judul">
-                  {{ $post['title'] }}
+                  {{ $post->title }}
                 </h2>
                 <div class="entry-meta">
                   <ul>
@@ -39,9 +39,8 @@
                 </div>
               </div>
               <div class="entry-content pb-3 px-lg-5">
-                <p>
-                  {{ $post['body'] }}
-                </p>
+
+                  {!! $post->body !!}
                 
                 <div class="tag">
                   <i class="bi bi-tags"></i>Tags:

@@ -22,7 +22,7 @@ Route::get('/', [DivisiController::class, 'index']);
 Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);
-Route::get('blog/{slug}', [PostController::class, 'show']);
+Route::get('/blog/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/toko', function () {
     return view('toko', [

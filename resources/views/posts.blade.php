@@ -46,7 +46,7 @@
                 <img src="img/contoh.jpg" alt="" class="img-fluid">
               </div>
               <h2 class="entry-title">
-                <a href="/blog/{{ $post['slug'] }}">{{ $post['title'] }}</a>
+                <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a>
               </h2>
               <div class="entry-meta">
                 <ul>
@@ -57,7 +57,7 @@
               </div>
               <div class="entry-content">
                 <p>
-                  {{ $post['body'] }}
+                  {{ $post->excerpt }}
                 </p>
               </div>
             </article><!-- End blog entry -->
