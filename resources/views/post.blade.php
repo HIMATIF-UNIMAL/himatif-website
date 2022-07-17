@@ -74,35 +74,22 @@
             <h2>Komentar</h2>
             <hr>
             <a href="#" class="text-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square"></i> Tambahkan Komentar</a>
-            <div class="card  card-review mt-4 pl-3">
+            @foreach ($post->comments as $comment)
+                <div class="card  card-review mt-4 pl-3">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-1 p-2">
                             <img src="{{ url('img/user.svg') }}" alt="user">
                         </div>
                         <div class="col-md-11 ">
-                            <h4>Rektor Unimal</h4>
+                            <h4>{{ $comment->name }}</h4>
                             <span class="text-muted">2021-03-27</span>
-                            <p class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="pt-3">{{ $comment->body }}</p>
                         </div>
                     </div>  
                 </div>
             </div>
-            <div class="card card-review mt-4 pl-3">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-1 p-2">
-                            <img src="{{ url('img/user.svg') }}" alt="user">
-                        </div>
-                        <div class="col-md-11">
-                            <h4>Kepala Jurusan</h4>
-                            <span class="text-muted">2021-03-27</span>
-                            <p class="pt-3">Facere omnis harum laudantium necessitatibus fugit saepe sed!</p>
-                        </div>
-                    </div>  
-                </div>
-            </div>              
-
+            @endforeach
             <!---------------Modal----------------------->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
