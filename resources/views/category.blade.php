@@ -21,8 +21,8 @@
       <div class="container">
         <div class="section-title">
           <h2>Blog</h2>
-          <p>Berita & Artikel</p>
-          <!-- <p>Kategori : Artikel</p> -->
+          {{-- <p>Berita & Artikel</p> --}}
+          <p>Kategori : {{ $category }}</p>
           <!-- <p>Tags : Teknologi</p> -->
           <!-- <p>Search : test</p> -->
         </div>
@@ -43,7 +43,7 @@
           <div class="col-lg-4 col-md-6 entries">
             <article class="entry">
               <div class="entry-img">
-                <img src="img/contoh.jpg" alt="" class="img-fluid">
+                <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
               </div>
               <h2 class="entry-title">
                 <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a>
@@ -52,7 +52,7 @@
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Admin</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">{{ $post->category->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                 </ul>
               </div>
               <div class="entry-content">

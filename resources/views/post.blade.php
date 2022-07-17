@@ -32,9 +32,9 @@
                 </h2>
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post['author'] }}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Admin</a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="blog-single.html">Artikel</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                   </ul>
                 </div>
               </div>
