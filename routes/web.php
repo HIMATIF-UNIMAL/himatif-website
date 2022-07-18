@@ -4,9 +4,11 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Sejarah;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,8 +27,8 @@ Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
-Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/{category:slug}', [CategoryController::class, 'show']);
+Route::get('/authors/{author:username}', [UserController::class, 'show']);
 
 Route::get('/toko', function () {
     return view('toko', [
