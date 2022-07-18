@@ -5,6 +5,7 @@ use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Sejarah;
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [DivisiController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);

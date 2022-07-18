@@ -21,7 +21,7 @@
       <div class="container">
         <div class="section-title">
           <h2>Blog</h2>
-          <p>Berita & Artikel</p>
+          <p>{{ $title }}</p>
           <!-- <p>Kategori : Artikel</p> -->
           <!-- <p>Tags : Teknologi</p> -->
           <!-- <p>Search : test</p> -->

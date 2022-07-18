@@ -86,35 +86,36 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(20)->create();
 
-        Comment::create([
-            'name' => 'Pak Rektor',
-            'post_id' => 1,
-            'email' => 'rektor@gmail.com',
-            'body' => 'waw sangat keren',
-        ]);
-        Comment::create([
-            'name' => 'Pak Rektor',
-            'post_id' => 1,
-            'email' => 'rektor@gmail.com',
-            'body' => 'waw sangat keren',
-        ]);
-        Comment::create([
-            'name' => 'Pak Rektor',
-            'post_id' => 2,
-            'email' => 'rektor@gmail.com',
-            'body' => 'waw sangat keren',
-        ]);
-        Comment::create([
-            'name' => 'Pak Rektor',
-            'post_id' => 3,
-            'email' => 'rektor@gmail.com',
-            'body' => 'waw sangat keren',
-        ]);
-        Comment::create([
-            'name' => 'Pak Rektor',
-            'post_id' => 2,
-            'email' => 'rektor@gmail.com',
-            'body' => 'waw sangat keren',
-        ]);
+        Comment::factory(100)->create();
+        // Comment::create([
+        //     'name' => 'Pak Rektor',
+        //     'post_id' => 1,
+        //     'email' => 'rektor@gmail.com',
+        //     'body' => 'waw sangat keren',
+        // ]);
+        // Comment::create([
+        //     'name' => 'Pak Rektor',
+        //     'post_id' => 1,
+        //     'email' => 'rektor@gmail.com',
+        //     'body' => 'waw sangat keren',
+        // ]);
+        // Comment::create([
+        //     'name' => 'Pak Rektor',
+        //     'post_id' => 2,
+        //     'email' => 'rektor@gmail.com',
+        //     'body' => 'waw sangat keren',
+        // ]);
+        // Comment::create([
+        //     'name' => 'Pak Rektor',
+        //     'post_id' => 3,
+        //     'email' => 'rektor@gmail.com',
+        //     'body' => 'waw sangat keren',
+        // ]);
+        // Comment::create([
+        //     'name' => 'Pak Rektor',
+        //     'post_id' => 2,
+        //     'email' => 'rektor@gmail.com',
+        //     'body' => 'waw sangat keren',
+        // ]);
     }
 }

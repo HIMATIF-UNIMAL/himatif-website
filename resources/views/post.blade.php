@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-md-11 ">
                             <h4>{{ $comment->name }}</h4>
-                            <span class="text-muted">2021-03-27</span>
+                            <span class="text-muted">{{ $comment->created_at }}</span>
                             <p class="pt-3">{{ $comment->body }}</p>
                         </div>
                     </div>  

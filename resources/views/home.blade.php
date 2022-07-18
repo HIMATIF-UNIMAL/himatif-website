@@ -159,40 +159,22 @@
         <span>Dapatkan Berita terbaru mengenai kegiatan HIMATIF</span>
       </div>
       <div class="row content">
+        @foreach ($posts as $post)
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="card">
-            <img src="img/contoh3.jpg" class="card-img-top" alt="...">
+            <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <small>2 Maret 2022</small>
-              <h4 class="title"><a href="blog-detail.html">HIMATIF Universitas Malikussaleh Bersama PERMIKOMNAS RI  </a></h4>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dicta iste nam beatae saepe illum reiciendis tempore similique laudantium sequi quam, praesentium labore, veritatis facilis dolor. Enim et iste aliquid...</p>
+              <small>{{ $post->created_at }}</small>
+              <h4 class="title"><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h4>
+              <p class="card-text">{{ $post->excerpt }}</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-5">
-          <div class="card">
-            <img src="img/contoh3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <small>2 Maret 2022</small>
-              <h4 class="title"><a href="blog-detail.html">Informatics Goes To School Hadir Kembali!! Sosialisasi Jurusan Informatika Universitas Malikussaleh... </a></h4>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dicta iste nam beatae saepe illum reiciendis tempore similique laudantium sequi quam, praesentium labore, veritatis facilis dolor. Enim et iste aliquid...</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-5">
-          <div class="card">
-            <img src="img/contoh3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <small>2 Maret 2022</small>
-              <h4 class="title"><a href="blog-detail.html">HIMATIF UNIMAL BERSAMA PERMIKOMNAS WILAYAH 1 AKAN MENGOPTIMAL ARTIFICIAL INTELIGENT (AI) </a></h4>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae dicta iste nam beatae saepe illum reiciendis tempore similique laudantium sequi quam, praesentium labore, veritatis facilis dolor. Enim et iste aliquid...</p>
-            </div>
-          </div>
-        </div>
+        @endforeach
       </div>
       <div class="row">
         <div class="col-12 text-center">
-          <a href="blog.html" class="btn btn-success tombol">Lihat Berita Lainnya <i class="bi bi-arrow-right"></i></a>
+          <a href="/blog" class="btn btn-success tombol">Lihat Berita Lainnya <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
 
