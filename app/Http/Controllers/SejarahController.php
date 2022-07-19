@@ -11,6 +11,7 @@ class SejarahController extends Controller
     {
         return view('sejarah', [
             'title' => 'Sejarah',
+            'active' => 'profile',
             'content' => Sejarah::all()
         ]);
     }

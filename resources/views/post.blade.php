@@ -33,7 +33,7 @@
                 <div class="entry-meta">
                   <ul>
                     <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-calendar-check"></i> {{ $post->created_at->format('d M Y') }}</li>
                     <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                   </ul>
                 </div>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="col-md-11 ">
                             <h4>{{ $comment->name }}</h4>
-                            <span class="text-muted">{{ $comment->created_at }}</span>
+                            <span class="text-muted bi bi-calendar-check">  {{ $comment->created_at->format('d M Y') }}</span>
                             <p class="pt-3">{{ $comment->body }}</p>
                         </div>
                     </div>  

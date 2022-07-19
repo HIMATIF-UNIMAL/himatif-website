@@ -39,7 +39,33 @@
             </form>
           </div>
 
-          @foreach($posts as $post)
+          @if ($posts->count())
+              <div class="mb-3 entries">
+                <article class="entry">
+                <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="entry-title">
+                    <a href="/blog/{{ $posts[0]->slug }}">{{ $posts[0]->title }}</a>
+                  </h5>
+                  <div class="entry-meta">
+                    <ul>
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $posts[0]->created_at->format('H:i') }}</li>
+                      <li class="d-flex align-items-center"><i class="bi bi-calendar-check"></i>{{ $posts[0]->created_at->format('d M Y') }}</li>
+                      <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $posts[0]->category->slug }}">{{ $posts[0]->category->name }}</a></li>
+                    </ul>
+                  </div>
+                  <p class="card-text">{{ $posts[0]->excerpt }}</p>
+                </div>
+                </article>
+              </div>
+          @else
+              <div class="alert alert-info">
+                <strong>Info!</strong> Belum ada artikel.
+              </div>
+          @endif
+
+          @foreach($posts->skip(1) as $post)
           <div class="col-lg-4 col-md-6 entries">
             <article class="entry">
               <div class="entry-img">
@@ -51,7 +77,7 @@
               <div class="entry-meta">
                 <ul>
                   <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-calendar-check"></i>{{ $post->created_at->format('d M Y') }}</li>
                   <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                 </ul>
               </div>

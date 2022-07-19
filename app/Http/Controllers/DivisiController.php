@@ -34,6 +34,7 @@ class DivisiController extends Controller
         }
         return view('divisi', [
             'title' => 'Divisi',
+            'active' => 'profile',
             'nama_divisi' => $nama_divisi,
             'divisi' => Divisi::find($divisi)
         ]);

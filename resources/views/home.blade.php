@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row content">
         <div class="col-lg-6 pb-5 pb-lg-0">
-          <img src="img/contoh.jpg" class="img-fluid foto" alt="">
+          <img src="{{ url('img/contoh.jpg') }}" class="img-fluid foto" alt="">
         </div>
         <div class="col-lg-6">
           <div class="row">
@@ -164,7 +164,7 @@
           <div class="card">
             <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-              <small>{{ $post->created_at }}</small>
+              <small class="bi bi-calendar-check"> {{ $post->created_at->format('d M Y') }}</small>
               <h4 class="title"><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h4>
               <p class="card-text">{{ $post->excerpt }}</p>
             </div>
