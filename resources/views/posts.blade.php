@@ -28,12 +28,13 @@
         </div>
         <div class="row justify-content-center">
 
+          {{-- Searching --}}
           <div class="search col-lg-10 my-4 pb-4">
-            <form action="" method="post">
+            <form action="/blog">
               <div class="input-group">
-                <input type="text" class="form-control form-control-lg" aria-label="Text input with dropdown button" placeholder="Mau Cari Apa ? ">
+                <input type="text" class="form-control form-control-lg" placeholder="Mau Cari Apa ? " name="search" value="{{ request('search') }}">
                 <div class="input-group-append">
-                  <button class="btn btn-success " type="button"><i class="bi bi-search"></i> Search</button>
+                  <button class="btn btn-success" type="submit"><i class="bi bi-search"></i> Search</button>
                 </div>
             </div>
             </form>
@@ -59,11 +60,6 @@
                 </div>
                 </article>
               </div>
-          @else
-              <div class="alert alert-info">
-                <strong>Info!</strong> Belum ada artikel.
-              </div>
-          @endif
 
           @foreach($posts->skip(1) as $post)
           <div class="col-lg-4 col-md-6 entries">
@@ -90,8 +86,16 @@
           </div>
           @endforeach
 
+          @else
+              <div class="alert alert-info">
+                <strong>! Keyword yang dicari tidak ditemukan.</strong> 
+              </div>
+          @endif
+
         </div><!-- End blog entries list -->
-        <div class="row">
+  
+        <!-- Pagination -->
+        <div class="row mt-4">
           <div class="col-12">
             <nav aria-label="...">
               <ul class="pagination  justify-content-center justify-content-lg-start">

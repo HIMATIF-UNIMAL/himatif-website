@@ -34,24 +34,28 @@ Route::get('/authors/{author:username}', [UserController::class, 'show']);
 Route::get('/toko', function () {
     return view('toko', [
         'title' => 'Toko',
+        'active' => 'toko',
         ''
     ]);
 });
 
 Route::get('/events', function () {
     return view('events', [
+        'active' => 'events',
         'title' => 'Events',
     ]);
 });
 
 Route::get('/prestasi', function () {
     return view('prestasi', [
+        'active' => 'prestasi',
         'title' => 'Prestasi',
     ]);
 });
 
 Route::get('/galeri', function () {
     return view('galeri', [
+        'active' => 'galeri',
         'title' => 'Galeri',
     ]);
 });
