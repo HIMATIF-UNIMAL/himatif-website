@@ -14,7 +14,7 @@ class HomeController extends Controller
             'title' => 'Home',
             'active' => 'home',
             'divisi' => Divisi::find2(),
-            'posts' => Post::latest()->get()
+            'posts' => Post::latest()->paginate(3)
         ]);
     }
 }

@@ -313,14 +313,15 @@
 #hero {
     width: 100%;
     height: 95vh;
-    background: url("../img/hero.jpg") top left;
+    background: url("../img/hero.jpg");
     background-size: cover;
     position: relative;
+    background-position: center;
 }
 
 #hero:before {
     content: "";
-    background-color: rgba(4, 12, 21, 0.226);
+    background-color: rgba(4, 12, 21, 0.521);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -428,6 +429,7 @@
 @media (max-height: 500px) {
     #hero {
         height: 120vh;
+        background-size: cover !important;
     }
 }
 
@@ -852,6 +854,88 @@ section {
     padding-right: 30px;
     font-size: 18px;
 }
+
+.blog .highlight {
+    height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.blog .thumb {
+    padding: 0px;
+    margin-bottom: 60px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.blog .thumb .entry-img {
+    max-height: 440px;
+    margin: -30px -30px 20px -30px;
+    overflow: hidden;
+}
+
+.blog .thumb .entry-title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.blog .thumb .entry-title a {
+    color: #111;
+    transition: 0.3s;
+}
+
+.blog .thumb .entry-title a:hover {
+    color: #198754;
+}
+
+.blog .thumb .entry-meta {
+    margin-bottom: 15px;
+    color: #777777;
+}
+
+.blog .thumb .entry-meta ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.blog .thumb .entry-meta ul li+li {
+    padding-left: 20px;
+}
+
+.blog .thumb .entry-meta i {
+    font-size: 16px;
+    margin-right: 8px;
+    line-height: 0;
+}
+
+.blog .thumb .entry-meta a {
+    color: #847872;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.blog .thumb .entry-content p {
+    line-height: 24px;
+}
+
+.blog-detail {
+    margin-bottom: -150px;
+}
+
+.blog .entry .judul {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
 
 .blog a {
     text-decoration: none;

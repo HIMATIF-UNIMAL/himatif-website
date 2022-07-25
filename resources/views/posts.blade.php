@@ -31,6 +31,12 @@
           {{-- Searching --}}
           <div class="search col-lg-10 my-4 pb-4">
             <form action="/blog">
+              @if (request('category')) 
+                  <input type="hidden" name="category" value="{{ request('category') }}">
+              @endif
+              @if (request('author')) 
+                  <input type="hidden" name="author" value="{{ request('author') }}">
+              @endif
               <div class="input-group">
                 <input type="text" class="form-control form-control-lg" placeholder="Mau Cari Apa ? " name="search" value="{{ request('search') }}">
                 <div class="input-group-append">
@@ -42,18 +48,18 @@
 
           @if ($posts->count())
               <div class="mb-3 entries">
-                <article class="entry">
-                <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
+                <article class="thumb">
+                <img src="{{ url('img/contoh.jpg') }}" class="highlight" alt="...">
                 <div class="card-body text-center">
                   <h5 class="entry-title">
                     <a href="/blog/{{ $posts[0]->slug }}">{{ $posts[0]->title }}</a>
                   </h5>
                   <div class="entry-meta">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a></li>
                       <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $posts[0]->created_at->format('H:i') }}</li>
                       <li class="d-flex align-items-center"><i class="bi bi-calendar-check"></i>{{ $posts[0]->created_at->format('d M Y') }}</li>
-                      <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $posts[0]->category->slug }}">{{ $posts[0]->category->name }}</a></li>
+                      <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/blog?category={{ $posts[0]->category->slug }}">{{ $posts[0]->category->name }}</a></li>
                     </ul>
                   </div>
                   <p class="card-text">{{ $posts[0]->excerpt }}</p>
@@ -72,9 +78,9 @@
               </h2>
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/blog?author={{ $post->author->username }}">{{ $post->author->name }}</a></li>
                   <li class="d-flex align-items-center"><i class="bi bi-calendar-check"></i>{{ $post->created_at->format('d M Y') }}</li>
-                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-bookmarks"></i> <a href="/blog?category={{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                 </ul>
               </div>
               <div class="entry-content">
@@ -95,25 +101,11 @@
         </div><!-- End blog entries list -->
   
         <!-- Pagination -->
-        <div class="row mt-4">
-          <div class="col-12">
-            <nav aria-label="...">
-              <ul class="pagination  justify-content-center justify-content-lg-start">
-                <li class="page-item disabled">
-                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active" aria-current="page">
-                  <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+
+        {{ $posts->links() }}
+        
+        {{-- End Pagination --}}
+
       </div>
     </section><!-- End Blog Section -->
 @endsection

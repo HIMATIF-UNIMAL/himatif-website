@@ -28,8 +28,7 @@ Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
-Route::get('/categories/{category:slug}', [CategoryController::class, 'show']);
-Route::get('/authors/{author:username}', [UserController::class, 'show']);
+
 
 Route::get('/toko', function () {
     return view('toko', [
