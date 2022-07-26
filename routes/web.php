@@ -1,16 +1,13 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DivisiController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\SejarahController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\HomeController;
-use App\Models\Category;
-use App\Models\Post;
-use App\Models\Sejarah;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DivisiController;
+use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,3 +55,5 @@ Route::get('/galeri', function () {
         'title' => 'Galeri',
     ]);
 });
+
+Route::get('/login', [LoginController::class, 'index']);

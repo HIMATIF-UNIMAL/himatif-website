@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
       <a href="/" class="logo"><img src="{{ url('img/logo4.png') }}" alt="Logo"></a>
       <nav id="navbar" class="navbar">
-        <ul>
+        <ul class="nav-item">
           <li><a class="nav-link {{ ($active === 'home') ? 'active' : '' }}" href="/">Home</a></li>
           <li class="dropdown {{ ($active === 'profile') ? 'active' : '' }}"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down"></i></a>
             <ul>

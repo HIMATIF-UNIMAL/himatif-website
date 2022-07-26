@@ -45,9 +45,16 @@
 
   <!-- Vendor JS Files -->
   <script src="{{ url('js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('js/list.min.js') }}"></script>
+  <script> 
+  var monkeyList = new List('test-list', { 
+    valueNames: ['name']
+  });
+  </script>
 
   <!-- _Template Main JS File_ -->
   <script src="{{ url('js/main.js') }}"></script>
+
 
   <!-- Js Library for galery -->
   <script src="{{ url('js/jquery-3.6.0.min.js') }}"></script>
