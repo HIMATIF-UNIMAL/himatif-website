@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,4 +57,9 @@ Route::get('/galeri', function () {
     ]);
 });
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
