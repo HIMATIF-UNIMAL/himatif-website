@@ -9,6 +9,7 @@ use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,5 @@ Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
