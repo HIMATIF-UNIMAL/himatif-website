@@ -47,14 +47,7 @@
             <li><a class="nav-link" href="#"><i class="far fa-envelope"></i> <span>Inbox</span></a></li>
             <li><a class="nav-link" href="#"><i class="fas fa-cog"></i> <span>Setting</span></a></li>
             <li><a class="nav-link" href="#"><i class="fas fa-user"></i> <span>User</span></a></li>
-            <li>
-            <form action="/logout" method="post">
-            @csrf
-            <button type="submit" class="dropdown-item text-danger">
-                <i class="fas fa-sign-out-alt"> <span>Logout</span></i>
-            </button>
-            </form>
-            </li>
+            <li><a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
