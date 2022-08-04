@@ -8,7 +8,7 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="nav-item dropdown active" >
+            <li class="nav-item dropdown {{ Request::is('/dashboard') ? 'active' : '' }}" >
             <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Main Menu</li>
@@ -26,12 +26,12 @@
                 <li><a class="nav-link" href="#">IPTEK dan Kajian Ilmiah</a></li>
             </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown {{ Request::is('dashboard/posts*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-newspaper"></i> <span>Blog</span></a>
             <ul class="dropdown-menu">
                 <li><a class="nav-link" href="#">Kategori/Tags</a></li>
-                <li><a class="nav-link" href="#">Tambah Post</a></li>
-                <li><a class="nav-link" href="/dashboard/posts">Post</a></li>
+                <li class="{{ Request::is('dashboard/posts/create') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
+                <li class="{{ Request::is('dashboard/posts') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
                 <li><a class="nav-link" href="#">Komentar</a></li>
             </ul>
             </li>

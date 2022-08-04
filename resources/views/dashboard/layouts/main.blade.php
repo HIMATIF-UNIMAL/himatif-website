@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
-  <script src="{{ url('dashboard/node_modules/chart.js/dist/Chart.min.css') }}"></script>
+  {{-- <script src="{{ url('dashboard/node_modules/chart.js/dist/Chart.min.css') }}"></script> --}}
   <link rel="stylesheet" href="{{ url('dashboard/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ url('dashboard/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ url('dashboard/node_modules/summernote/dist/summernote-bs4.css') }}">
