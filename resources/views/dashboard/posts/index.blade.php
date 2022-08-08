@@ -17,6 +17,13 @@
             <div class="card-header">
             <h4>Data Post</h4>
             </div>
+
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-striped" id="table-1">

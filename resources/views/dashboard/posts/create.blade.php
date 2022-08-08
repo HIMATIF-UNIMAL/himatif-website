@@ -23,13 +23,23 @@
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="title">Judul</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="text" class="form-control" id="title" name="title">
+                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{ old('title') }}">
+                    @error('title')
+                      <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                      </span>
+                    @enderror
                   </div>
                 </div>
                 <div class="form-group row mb-4 hidden">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="slug">Slug</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="text" class="form-control" id="slug" name="slug" readonly disabled>
+                    <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
+                    @error('slug')
+                      <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                      </span>
+                    @enderror
                   </div>
                 </div>
                 <div class="form-group row mb-4">
@@ -38,9 +48,18 @@
                     <select class="form-control select2" name="category_id">
                       <option selected>Pilih Kategori</option>
                       @foreach ($categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @if (old('category_id') == $category->id)
+                          <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
+                        @else
+                          <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endif
                       @endforeach
                     </select>
+                    @error('category_id')
+                      <span class="invalid" role="alert">
+                        <small class="text-danger">{{ $message }}</small>
+                      </span>
+                    @enderror
                   </div>
                 </div>
                 {{-- <div class="form-group row mb-4">
@@ -52,7 +71,12 @@
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="body">Isi</label>
                   <div class="col-sm-12 col-md-7">
-                    <textarea class="summernote" name="body" id="body"></textarea>
+                    @error('body')
+                      <span class="invalid" role="alert">
+                        <small class="text-danger">{{ $message }}</small>
+                      </span>
+                    @enderror
+                    <textarea class="summernote @error('body') is-invalid @enderror" name="body" id="body">{{ old('body') }}</textarea>
                   </div>
                 </div>
                 <div class="form-group row mb-4">
