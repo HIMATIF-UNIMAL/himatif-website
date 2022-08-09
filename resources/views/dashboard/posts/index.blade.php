@@ -53,8 +53,13 @@
                             <td>{{ $post->comments->count() }}</td>
                             <td>
                                 <div class="btn-group mb-3" role="group" aria-label="Basic example">
-                                <button type="button" data-toggle="modal" data-target="#edit" class="btn btn-warning"><i class="fas fa-pen-alt"></i></button>
-                                <a href="a.html" type="button" class="btn btn-danger btn-del" ><i class="fas fa-trash-alt"></i></a>
+                                <a href="/dashboard/posts/{{ $post->slug }}/edit" type="button" class="btn btn-warning" ><i class="fas fa-pen-alt"></i></a>
+                                <form action="/dashboard/posts/{{ $post->slug }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                {{-- <a href="/dashboard/posts" type="button" class="btn btn-danger btn-del" ><i class="fas fa-trash-alt"></i></a> --}}
                                 </div>
                             </td>
                         </tr>
