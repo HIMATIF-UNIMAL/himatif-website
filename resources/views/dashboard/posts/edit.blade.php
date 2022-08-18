@@ -18,7 +18,7 @@
               <h4>Form edit post</h4>
             </div>
             <div class="card-body">
-              <form action="/dashboard/posts/{{ $post->slug }}" method="post">
+              <form action="/dashboard/posts/{{ $post->slug }}" method="post" enctype="multipart/form-data">
                 @method('put')
                 @csrf
                 <div class="form-group row mb-4">
@@ -63,13 +63,23 @@
                     @enderror
                   </div>
                 </div>
-                {{-- <div class="form-group row mb-4">
-                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
+                <div class="form-group row mb-4">
+                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="image">Gambar</label>
+                  <input type="hidden" name="oldImage" value="{{ $post->image }}">
                   <div class="col-sm-12 col-md-7">
-                    <input type="file" name=""class="form-control">
-                    <small class="tetx-success">Gambar : contoh.jpg</small>
+                    @if ($post->image)
+                      <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                    @else
+                      <img class="img-preview img-fluid mb-3 col-sm-5">
+                    @endif
+                    <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" onchange="previewImage()">
+                    @error('image')
+                      <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                      </span>
+                    @enderror
                   </div>
-                </div> --}}
+                </div>
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="body">Isi</label>
                   <div class="col-sm-12 col-md-7">
@@ -104,6 +114,20 @@
         .then(response => response.json())
         .then(data => slug.value = data.slug)
     });
+
+    function previewImage() {
+      const image = document.querySelector('#image');
+      const imgPreview = document.querySelector('.img-preview');
+
+      imgPreview.style.display = 'block'; 
+
+      const oFReader = new FileReader();
+      oFReader.readAsDataURL(image.files[0]);
+
+      oFReader.onload = function(oFREvent) {
+        imgPreview.src = oFREvent.target.result;
+      };
+    }
   </script>
 @endsection
 

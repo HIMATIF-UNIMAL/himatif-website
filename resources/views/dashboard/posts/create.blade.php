@@ -65,7 +65,8 @@
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="image">Gambar</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image">
+                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                    <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" onchange="previewImage()">
                     @error('image')
                       <span class="invalid-feedback" role="alert">
                         {{ $message }}
@@ -107,5 +108,19 @@
         .then(response => response.json())
         .then(data => slug.value = data.slug)
     });
+
+    function previewImage() {
+      const image = document.querySelector('#image');
+      const imgPreview = document.querySelector('.img-preview');
+
+      imgPreview.style.display = 'block'; 
+
+      const oFReader = new FileReader();
+      oFReader.readAsDataURL(image.files[0]);
+
+      oFReader.onload = function(oFREvent) {
+        imgPreview.src = oFREvent.target.result;
+      };
+    }
   </script>
 @endsection
