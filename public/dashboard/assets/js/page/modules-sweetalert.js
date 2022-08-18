@@ -38,9 +38,9 @@ $('.btn-del-a').on('click', function (e) {
     })
 });
 
-$('.btn-del').on('click', function (e) {
+$('.btn-del').click(function (e) {
     e.preventDefault();
-    var form = this;
+    let form = $(this).parents('form');
     Swal.fire({
         title: 'Hapus Data?',
         text: "Kamu yakin ingin menghapus data?",
@@ -49,11 +49,11 @@ $('.btn-del').on('click', function (e) {
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Hapus!'
-    }).then((result) => {
-        if (result.isConfirmed) {
+    }).then(function (value) {
+        if (value) {
             form.submit();
         }
-    })
+    });
 });
 
 $("#swal-7").click(function () {

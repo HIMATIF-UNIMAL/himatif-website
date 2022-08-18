@@ -23,8 +23,12 @@
 
           <div class="col-lg-9 accordion-body">
             <article class="entry">
-              <div class="entry-img">
-                <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
+              <div class="entry-img" style="max-height: 350px; overflow:hidden;" >
+                @if ($post->image)
+                  <img src="{{ asset('storage/' . $post->image) }}" alt="" class="img-fluid">
+                @else
+                  <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
+                @endif
               </div>
               <div class="my-5 px-lg-5">
                 <h2 class="judul">

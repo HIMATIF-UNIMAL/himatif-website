@@ -18,6 +18,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'IPTEK GANTENG',
+            'username' => 'iptek2022',
+            'email' => 'iptek@unimal.ac.id',
+            'password' => bcrypt('iptek2022')
+        ]);
+
         User::factory(5)->create();
 
         Category::create([

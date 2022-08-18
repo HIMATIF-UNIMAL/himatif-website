@@ -162,7 +162,11 @@
         @foreach ($posts as $post)
         <div class="col-lg-4 col-md-6 mb-5">
           <div class="card">
-            <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
+            @if ($post->image)
+              <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top" alt="...">
+            @else
+              <img src="{{ url('img/contoh.jpg') }}" class="card-img-top" alt="...">
+            @endif
             <div class="card-body">
               <small class="bi bi-calendar-check"> {{ $post->created_at->format('d M Y') }}</small>
               <h4 class="title"><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h4>

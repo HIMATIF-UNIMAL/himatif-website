@@ -49,7 +49,13 @@
           @if ($posts->count())
               <div class="mb-3 entries">
                 <article class="thumb">
-                <img src="{{ url('img/contoh.jpg') }}" class="highlight" alt="...">
+                <div style="max-height: 400px; overflow:hidden;">
+                  @if ($posts[0]->image)
+                    <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="" class="img-fluid">
+                  @else
+                    <img src="{{ url('img/contoh.jpg') }}" class="highlight" alt="...">
+                  @endif
+                </div>
                 <div class="card-body text-center">
                   <h5 class="entry-title">
                     <a href="/blog/{{ $posts[0]->slug }}">{{ $posts[0]->title }}</a>
@@ -71,7 +77,11 @@
           <div class="col-lg-4 col-md-6 entries">
             <article class="entry">
               <div class="entry-img">
-                <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
+                @if ($post->image)
+                  <img src="{{ asset('storage/' . $post->image) }}" alt="" class="img-fluid">
+                @else
+                  <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
+                @endif
               </div>
               <h2 class="entry-title">
                 <a href="/blog/{{ $post->slug }}">{{ $post->title }}</a>
