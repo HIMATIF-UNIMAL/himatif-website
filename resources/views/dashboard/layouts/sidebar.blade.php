@@ -29,8 +29,10 @@
             <li class="nav-item dropdown {{ Request::is('dashboard/posts*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-newspaper"></i> <span>Blog</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="#">Kategori/Tags</a></li>
-                <li class="{{ Request::is('dashboard/posts/create') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
+                @can('admin')
+                    <li class="{{ Request::is('dashboard/categories') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/categories">Kategori/Tags</a></li>
+                @endcan
+                <li class="{{ Request::is('dashboard/posts/create') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
                 <li class="{{ Request::is('dashboard/posts') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
                 <li><a class="nav-link" href="#">Komentar</a></li>
             </ul>

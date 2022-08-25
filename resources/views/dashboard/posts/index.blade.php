@@ -59,7 +59,6 @@
                                     @method('delete')
                                     <button type="submit" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></button>
                                 </form>
-                                {{-- <a href="/dashboard/posts" type="button" class="btn btn-danger btn-del" ><i class="fas fa-trash-alt"></i></a> --}}
                                 </div>
                             </td>
                         </tr>
