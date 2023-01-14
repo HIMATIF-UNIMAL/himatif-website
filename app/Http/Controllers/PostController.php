@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Comment;
 
 class PostController extends Controller
 {
@@ -37,5 +38,23 @@ class PostController extends Controller
             'active' => 'posts',
             'post' => $post
         ]);
+    }
+
+    public function storeComment(Request $request, Post $post)
+    {
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'body' => 'required|max:255'
+        ]);
+
+        Comment::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'body' => $request->body,
+            'post_id' => $post->id
+        ]);
+
+        return back();
     }
 }

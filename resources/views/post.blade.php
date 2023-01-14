@@ -99,16 +99,32 @@
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
                             <div class="modal-body p-5">
-                                <form method="post" action="">
+                                <form method="post" action="/blog/{{ $post->slug }}/comments">
+                                    @csrf
                                     <h2 class="mb-4">Tulis Komentar</h2>
                                     <div class="form-group mb-3">
-                                        <input class="form-control" type="text" placeholder="Nama" required >
+                                        <input class="form-control @error('name') is-invalid @enderror" type="text" placeholder="Nama" id="name" name="name" required >
+                                        @error('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
+                                      </div>
+                                    <div class="form-group mb-3">
+                                      <input class="form-control @error('email') is-invalid @enderror" type="email"  placeholder="Email" id="email" name="email" required >
+                                      @error('email')
+                                          <div class="invalid-feedback">
+                                              {{ $message }}
+                                          </div>
+                                      @enderror
                                     </div>
                                     <div class="form-group mb-3">
-                                      <input class="form-control" type="email"  placeholder="Email" required >
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <pre><textarea class="form-control" placeholder="Tulis Komentarmu" row="1" required=""></textarea></pre>
+                                        <pre><textarea class="form-control @error('body') is-invalid @enderror" placeholder="Tulis Komentarmu" row="1" id="body" name="body" required ></textarea></pre>
+                                        @error('body')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                        @enderror
                                     </div>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-success">Kirim</button>
