@@ -10,15 +10,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
-  {{-- <script src="{{ url('dashboard/node_modules/chart.js/dist/Chart.min.css') }}"></script> --}}
-  <link rel="stylesheet" href="{{ url('dashboard/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{ url('dashboard/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') }}">
-  <link rel="stylesheet" href="{{ url('dashboard/node_modules/summernote/dist/summernote-bs4.css') }}">
-  <link rel="stylesheet" href="{{ url('dashboard/node_modules/chocolat/dist/css/chocolat.css') }}">
+  {{-- <script src="{{ url('dbuser/node_modules/chart.js/dist/Chart.min.css') }}"></script> --}}
+  <link rel="stylesheet" href="{{ url('dbuser/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ url('dbuser/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ url('dbuser/node_modules/summernote/dist/summernote-bs4.css') }}">
+  <link rel="stylesheet" href="{{ url('dbuser/node_modules/chocolat/dist/css/chocolat.css') }}">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{{ url('dashboard/assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ url('dashboard/assets/css/components.css') }}">
+  <link rel="stylesheet" href="{{ url('dbuser/assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url('dbuser/assets/css/components.css') }}">
 </head>
 
 <body>
@@ -45,25 +45,25 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="{{ url('dashboard/assets/js/stisla.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/stisla.js') }}"></script>
 
   <!-- JS Libraies -->
-  <script src="{{ url('dashboard/node_modules/chart.js/dist/Chart.min.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/summernote/dist/summernote-bs4.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/sweetalert/dist/sweetalert.min.js') }}"></script>
-  <script src="{{ url('dashboard/node_modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/chart.js/dist/Chart.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/summernote/dist/summernote-bs4.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/sweetalert/dist/sweetalert.min.js') }}"></script>
+  <script src="{{ url('dbuser/node_modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 
   <!-- Template JS File -->
-  <script src="{{ url('dashboard/assets/js/scripts.js') }}"></script>
-  <script src="{{ url('dashboard/assets/js/custom.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/scripts.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/custom.js') }}"></script>
 
   <!-- Page Specific JS File -->
-  <script src="{{ url('dashboard/assets/js/page/modules-datatables.js') }}"></script>
-  <script src="{{ url('dashboard/assets/js/page/modules-sweetalert.js') }}"></script>
-  <script src="{{ url('dashboard/assets/js/page/bootstrap-modal.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/page/modules-datatables.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/page/modules-sweetalert.js') }}"></script>
+  <script src="{{ url('dbuser/assets/js/page/bootstrap-modal.js') }}"></script>
   <script>
     var ctx = document.getElementById("myChart2").getContext('2d');
     var myChart = new Chart(ctx, {

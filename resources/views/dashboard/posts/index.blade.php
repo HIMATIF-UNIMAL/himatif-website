@@ -44,7 +44,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>
                                 <div class="gallery">
-                                <div class="gallery-item" data-image="assets/img/news/img03.jpg" data-title="Image 1"></div>
+                                <div class="gallery-item" data-image="{{ url('dbuser/assets/img/news/img03.jpg') }}" data-title="Image 1"></div>
                                 </div>
                             </td>
                             <td>{{ $post->category->name }}</td>

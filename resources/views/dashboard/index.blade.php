@@ -12,7 +12,7 @@
           <div class="section-body">
             <div class="row">
               <div class="col-12 mb-4">
-                <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="dashboard/assets/img/bg.jpg" style="background-image: url(&quot;dashboard/assets/img/unsplash/andre-benz-1214056-unsplash.jpg&quot;);">
+                <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="dbuser/assets/img/bg.jpg" style="background-image: url(&quot;dbuser/assets/img/unsplash/andre-benz-1214056-unsplash.jpg&quot;);">
                   <div class="hero-inner">
                     <h2>Hi, {{ auth()->user()->name }}!</h2>
                     <p class="lead">Good Morning, Have an nice day</p>
@@ -172,7 +172,7 @@
                   <div class="card-body">
                     <ul class="list-unstyled list-unstyled-border">
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-1.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-1.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right text-primary">Now</div>
                           <div class="media-title">Farhan A Mujib</div>
@@ -180,7 +180,7 @@
                         </div>
                       </li>
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-4.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-4.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right">12m</div>
                           <div class="media-title">Ujang Maman</div>
@@ -188,7 +188,7 @@
                         </div>
                       </li>
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-4.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-4.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right">12m</div>
                           <div class="media-title">Ujang Maman</div>
@@ -196,7 +196,7 @@
                         </div>
                       </li>
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-3.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-3.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right text-primary">Now</div>
                           <div class="media-title">Farhan A Mujib</div>
@@ -204,7 +204,7 @@
                         </div>
                       </li>
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-3.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-3.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right">12m</div>
                           <div class="media-title">Ujang Maman</div>
@@ -212,7 +212,7 @@
                         </div>
                       </li>
                       <li class="media">
-                        <img class="mr-3 rounded-circle" width="50" src="dashboard/assets/img/avatar/avatar-4.png" alt="avatar">
+                        <img class="mr-3 rounded-circle" width="50" src="dbuser/assets/img/avatar/avatar-4.png" alt="avatar">
                         <div class="media-body">
                           <div class="float-right">12m</div>
                           <div class="media-title">Ujang Maman</div>
