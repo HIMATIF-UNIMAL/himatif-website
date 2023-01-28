@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Comment;
+use App\Models\product;
 
 class DatabaseSeeder extends Seeder
 {
@@ -48,6 +49,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory(20)->create();
+        Product::factory(20)->create();
 
         Comment::factory(100)->create();
     }
