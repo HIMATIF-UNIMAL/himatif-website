@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\SejarahController;
+use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
@@ -29,36 +30,31 @@ Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show']);
 Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
+Route::get('/galeri', [GaleryController::class, 'index']);
 
 
-Route::get('/toko', function () {
-    return view('toko', [
-        'title' => 'Toko',
-        'active' => 'toko',
-        ''
-    ]);
-});
+// Route::get('/toko', function () {
+//     return view('toko', [
+//         'title' => 'Toko',
+//         'active' => 'toko',
+//         ''
+//     ]);
+// });
 
-Route::get('/events', function () {
-    return view('events', [
-        'active' => 'events',
-        'title' => 'Events',
-    ]);
-});
+// Route::get('/events', function () {
+//     return view('events', [
+//         'active' => 'events',
+//         'title' => 'Events',
+//     ]);
+// });
 
-Route::get('/prestasi', function () {
-    return view('prestasi', [
-        'active' => 'prestasi',
-        'title' => 'Prestasi',
-    ]);
-});
+// Route::get('/prestasi', function () {
+//     return view('prestasi', [
+//         'active' => 'prestasi',
+//         'title' => 'Prestasi',
+//     ]);
+// });
 
-Route::get('/galeri', function () {
-    return view('galeri', [
-        'active' => 'galeri',
-        'title' => 'Galeri',
-    ]);
-});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);

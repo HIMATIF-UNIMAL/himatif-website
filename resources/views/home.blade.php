@@ -39,8 +39,7 @@
                 <p>Visi</p>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Menjadi wadah yang membantu membentuk mahasiswa teknik informatika yang profesional, inovatif, dan berkepribadian serta mampu berkontribusi dalam pengembangan dunia teknologi dan memajukan masyarakat.
               </p>
             </div>
             <div class="col-12">
@@ -48,13 +47,15 @@
                 <p>Misi</p>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Untuk mencapai visi tersebut, berikut beberapa misi yang dilakukan oleh HIMATIF UNIMAL :
               </p>
               <ul>
-                <li><i class="bi bi-check2-all text-warning"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-                <li><i class="bi bi-check2-all text-warning"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-                <li><i class="bi bi-check2-all text-warning"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Menyelenggarakan kegiatan pelatihan dan workshop untuk meningkatkan keterampilan dan pengetahuan mahasiswa dalam bidang teknologi informasi.</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Berkolaborasi dengan industri dan perusahaan teknologi untuk memberikan pengalaman kerja dan magang bagi mahasiswa, sehingga mereka dapat mempersiapkan diri untuk masuk dunia kerja.</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Menjalin kerjasama dengan universitas lain dan organisasi professional dalam bidang teknologi informasi untuk memperluas jaringan dan wawasan mahasiswa.</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Memfasilitasi dan menyediakan akses bagi mahasiswa untuk belajar dan berpartisipasi dalam proyek-proyek teknologi informasi.</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Menyelenggarakan kompetisi dan lomba teknologi informasi untuk meningkatkan kreativitas dan inovasi mahasiswa.</li>
+                <li><i class="bi bi-check2-all text-warning"></i> Memberikan bantuan dan dukungan bagi mahasiswa untuk mengembangkan keahlian dan potensi mereka.</li>
               </ul>
             </div>
           </div>

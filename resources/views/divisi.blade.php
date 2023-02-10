@@ -43,7 +43,7 @@
     </div>
   </section><!-- End Pengurus Section -->
 
-  <section class="progja">
+  {{-- <section class="progja">
     <div class="container">
 
       <div class="row justify-content-center">
@@ -72,5 +72,5 @@
         </div>
       </div>
     </div>
-  </section><!-- End Pengurus Section -->
+  </section><!-- End Pengurus Section --> --}}
 @endsection

@@ -7,25 +7,39 @@ use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Comment;
+use stdClass;
 
 class PostController extends Controller
 {
+    public $meta;
+
+    public function __construct()
+    {
+        $this->meta = new stdClass();
+        $this->meta->keywords = 'berita himatif unimal, artikel himatif unimal, himatif unimal, himatif, unimal';
+        $this->meta->author = 'IPTEK HIMATIF UNIMAL';
+        $this->meta->description = 'Berita dan artikel mengenai Himpunan Mahasiswa Teknik Informatika Universitas Malikussaleh.';
+        $this->meta->url = 'https://himatif.unimal.ac.id/blog';
+        $this->meta->type = 'blog';
+        $this->meta->image = 'https://himatif.unimal.ac.id/img/logo.png';
+    }
+
     public function index()
     {
         $title = '';
         if (request('category')) {
             $category = Category::firstwhere('slug', request('category'));
-            $title = ' in ' . $category->name;
+            $title = ' mengenai ' . $category->name;
         }
 
         if (request('author')) {
             $author = User::firstwhere('username', request('author'));
-            $title = ' by ' . $author->name;
+            $title = ' dari ' . $author->name;
         }
 
         return view('posts', [
-            'title' => 'All Posts' . $title,
-            'active' => 'posts',
+            'title' => 'Semua Berita' . $title,
+            'meta' => $this->meta,
             'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(4)
                 ->withQueryString()
         ]);
@@ -33,10 +47,17 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
+        $this->meta->author = $post->author->username;
+        $this->meta->description = $post->excerpt;
+        $this->meta->url = 'https://himatif.unimal.ac.id/blog/' . $post->slug;
+        $this->meta->type = 'article';
+        $this->meta->image = 'https://himatif.unimal.ac.id/storage/post-images/' . $post->image;
+
+
         return view('post', [
-            'title' => 'Single Post',
-            'active' => 'posts',
-            'post' => $post
+            'title' => $post->title,
+            'meta' => $this->meta,
+            'post' => $post,
         ]);
     }
 

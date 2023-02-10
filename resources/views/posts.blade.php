@@ -78,7 +78,7 @@
             <article class="entry">
               <div class="entry-img">
                 @if ($post->image)
-                  <img src="{{ asset('storage/' . $post->image) }}" alt="" class="img-fluid">
+                  <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->title }}" class="img-fluid">
                 @else
                   <img src="{{ url('img/contoh.jpg') }}" alt="" class="img-fluid">
                 @endif

@@ -33,7 +33,7 @@ class DivisiController extends Controller
             $nama_divisi = 'Divisi Minat dan Bakat';
         }
         return view('divisi', [
-            'title' => 'Divisi',
+            'title' => $nama_divisi,
             'active' => 'profile',
             'nama_divisi' => $nama_divisi,
             'divisi' => Divisi::find($divisi)

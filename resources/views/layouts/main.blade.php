@@ -3,17 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>HIMATIF | {{ $title }}</title>
-
-  <meta name="description" content="">
-  <meta property="og:url" content="" />
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="HIMATIF | {{ $title }}" />
-  <meta property="og:image" content="{{ url('img/logo.png') }}" />
-  <meta property="og:description" content="" />
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+  <meta name="keywords" content="{{ $meta->keywords ?? '' }}">
+  <meta name="author" content="{{ $meta->author ?? '' }}">
+  <meta name="description" content="{{ $meta->description ?? '' }}">
+  <meta property="og:url" content="{{ $meta->url ?? '' }}" />
+  <meta property="og:type" content="{{ $meta->type ?? '' }}">
+  <meta property="og:title" content="{{ $title ?? '' }}" />
+  <meta property="og:image" content="{{ $meta->image ?? '' }}" />
+  <meta property="og:description" content="{{ $meta->description ?? '' }}" />
+  
+  <title>{{ $title }} - HIMATIF UNIMAL</title>
   <link rel="icon" type="image/x-icon" href="{{ url('img/logo.png') }}">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
