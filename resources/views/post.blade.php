@@ -57,10 +57,10 @@
               <div class="share px-lg-5 my-4">
                 <hr>
                 <strong class="me-3">Share : </strong>
-                <a href="" class="btn fb mb-2 mb-lg-0"><i class="bi bi-facebook"></i> Facebook</a>
-                <a href="" class="btn tw mb-2 mb-lg-0"><i class="bi bi-twitter"></i> twitter</a>
-                <a href="" class="btn ig mb-2 mb-lg-0"><i class="bi bi-instagram"></i> Instagram</a>
-                <a href="" class="btn in mb-2 mb-lg-0"><i class="bi bi-linkedin"></i> Linkedin</a>
+                <a href="whatsapp://send?text={{urlencode('Check out this post: '. route('posts.show', $post->slug) . ' #' . $post->title)}}" class="btn wa mb-2 mb-lg-0" style="background-color: green; color: white;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::url()) }}&picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn fb mb-2 mb-lg-0"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/?url={{ urlencode(Request::url()) }}& picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn ig mb-2 mb-lg-0"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(Request::url()) }}&title={{ urlencode($post->title) }}&summary={{ urlencode($post->excerpt) }}&source={{ urlencode(config('app.name')) }}&picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn in mb-2 mb-lg-0"><i class="bi bi-linkedin"></i> Linkedin</a>
                 <hr>
               </div>
             </article><!-- End blog entry -->
@@ -78,7 +78,7 @@
             <h2>Komentar</h2>
             <hr>
             <a href="#" class="text-success" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-square"></i> Tambahkan Komentar</a>
-            @foreach ($post->comments as $comment)
+            @foreach ($post->comments->sortByDesc('created_at') as $comment)
                 <div class="card  card-review mt-4 pl-3">
                 <div class="card-body">
                     <div class="row">
