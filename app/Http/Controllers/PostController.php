@@ -51,7 +51,7 @@ class PostController extends Controller
         $this->meta->description = $post->excerpt;
         $this->meta->url = 'https://himatif.unimal.ac.id/blog/' . $post->slug;
         $this->meta->type = 'article';
-        $this->meta->image = 'https://himatif.unimal.ac.id/storage/post-images/' . $post->image;
+        $this->meta->image = 'https://himatif.unimal.ac.id/storage/' . $post->image;
 
 
         return view('post', [

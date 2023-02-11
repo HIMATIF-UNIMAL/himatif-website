@@ -35,119 +35,71 @@
       <div class="row content toko-container justify-content-center">
 
         <div class="list">
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
+          @foreach ($products as $product)
+            <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
+              <div class="toko-wrap">
+                <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
+                <div class="toko-info">
+                  <div>
+                    <button class="btn btn-warning" type="button" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
+                  </div>
                 </div>
               </div>
+              <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->title }}</a></h4>
+              <p>Rp {{ $product->price }}</p>
             </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">Tas Cantik Himatif</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
-                </div>
-              </div>
-            </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">lampu hias</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
-                </div>
-              </div>
-            </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">boba</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
-                </div>
-              </div>
-            </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">Tas Cantik Himatif</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
-                </div>
-              </div>
-            </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">lampu hias</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-            <div class="toko-wrap">
-              <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-              <div class="toko-info">
-                <div>
-                  <button class="btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
-                </div>
-              </div>
-            </div>
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">boba</a></h4>
-            <p>Rp 200.000</p>
-          </div>
-        </div>
-
-        
-        
+          @endforeach
+        </div>        
       </div>
     </div>
   </div>
 </section><!-- End toko Section -->
 
-
-        <!---------------Modal----------------------->
-        <div class="detail-produk modal fade" id="beli" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog  modal-lg modal-dialog-centered">
-              <div class="modal-content bg-transparent">
-                <div class="modal-header bg-transparent">
-                  <button type="button" class="btn-close text-white bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+<!---------------Modal----------------------->
+<div class="detail-produk modal fade" id="beli" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent">
+        <div class="modal-header bg-transparent">
+          <button type="button" class="btn-close text-white bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body p-2">
+              <div class="row">
+                <div class="col-lg-5">
+                  <img src="img/product-03-290x372.jpg" class="img-fluid" alt="...">
                 </div>
-                  <div class="modal-body p-2">
-                      <div class="row">
-                        <div class="col-lg-5">
-                          <img src="img/product-03-290x372.jpg" class="img-fluid" alt="...">
-                        </div>
-                        <div class="col-lg-7 py-5 px-3">
-                          <h4>Tas cantik Himatif</h4>
-                          <h5>Rp 200.000</h5>
-                          <p>Deskripsi : <br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate natus distinctio perferendis consectetur mollitia quas inventore repellat culpa aliquam exercitationem reprehenderit amet alias, voluptate ullam sint nam placeat. Inventore!
-                          </p>
-                          <div class="d-grid gap-2 mt-5">
-                            <a href="https://api.whatsapp.com/send?phone=" class="btn btn-outline-success me-lg-3"><i class="bi bi-whatsapp"></i> Pesan via Whatsapp</a>
-                          </div>
-                        </div>
-                      </div>
+                <div class="col-lg-7 py-5 px-3">
+                  <h4>Tas cantik Himatif</h4>
+                  <h5>Rp 200.000</h5>
+                  <p>Deskripsi : <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate natus distinctio perferendis consectetur mollitia quas inventore repellat culpa aliquam exercitationem reprehenderit amet alias, voluptate ullam sint nam placeat. Inventore!
+                  </p>
+                  <div class="d-grid gap-2 mt-5">
+                    <a href="" target="_blank" class="btn btn-outline-success me-lg-3"><i class="bi bi-whatsapp"></i> Pesan via Whatsapp</a>
                   </div>
+                </div>
               </div>
           </div>
-        </div>
-        <!--------------- end Modal----------------------->
+      </div>
+  </div>
+</div>
+
+<script>
+  const products = @json($products);
+  document.querySelectorAll('.btn-warning').forEach(function(button) {
+    button.addEventListener('click', function() {
+      const productId = this.getAttribute('data-id');
+      const product = products.find(function(product) {
+        return product.id === parseInt(productId);
+      });
+
+      document.querySelector('.modal-body h4').innerHTML = product.title;
+      document.querySelector('.modal-body h5').innerHTML = 'Rp. ' + product.price;
+      document.querySelector('.modal-body img').src = "img/product-03-290x372.jpg";
+      // document.querySelector('.modal-body img').src = product.image;
+      document.querySelector('.modal-body p').innerHTML ='Deskripsi : <br>' + product.description;
+      document.querySelector('.modal-body .d-grid a').href = "https://api.whatsapp.com/send?phone=6287798747798&text=Assalamu'alaikum%20Kak%20Saya%20ingin%20bertanya%20seputar%20produk%20" + product.title + "%20dari%20HIMATIF%20Shop";
+    });
+  });
+</script>
+<!--------------- end Modal----------------------->
 @endsection

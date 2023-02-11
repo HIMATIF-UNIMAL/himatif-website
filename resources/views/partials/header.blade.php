@@ -25,7 +25,7 @@
             </ul>
           </li>
           <li><a class="nav-link {{ Request::is('blog') ? 'active' : '' }}" href="/blog">Blog</a></li>
-          {{-- <li><a class="nav-link {{ ($active === 'toko') ? 'active' : '' }}" href="/toko">Shop</a></li> --}}
+          <li><a class="nav-link {{ Request::is('toko') ? 'active' : '' }}" href="/toko">Shop</a></li>
           {{-- <li><a class="nav-link {{ ($active === 'events') ? 'active' : '' }}" href="/events">Event</a></li> --}}
           {{-- <li><a class="nav-link {{ ($active === 'prestasi') ? 'active' : '' }}" href="/prestasi">Prestasi</a></li> --}}
           <li><a class="nav-link {{ Request::is('galeri') ? 'active' : '' }}" href="/galeri">Galeri</a></li>

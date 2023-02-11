@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,7 @@ Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('post');
 Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
 Route::get('/galeri', [GaleryController::class, 'index']);
-
+Route::get('/toko', [ProductController::class, 'index']);
 
 // Route::get('/toko', function () {
 //     return view('toko', [

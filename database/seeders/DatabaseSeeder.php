@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Post::factory(20)->create();
-        Product::factory(20)->create();
+        Product::factory(10)->create();
 
         Comment::factory(100)->create();
     }
