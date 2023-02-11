@@ -51,15 +51,15 @@
                   <a href="" class="bg-light mx-1">#tech</a>  
                   <a href="" class="bg-light mx-1">#teknologi</a>  
                   <a href="" class="bg-light mx-1">#dies</a>  
-                  <a href="" class="bg-light mx-1">#dnv17</a>  
+                  <a href="" class="bg-light mx-1">#dnv17</a>
                 </div>
               </div>
               <div class="share px-lg-5 my-4">
                 <hr>
                 <strong class="me-3">Share : </strong>
-                <a href="whatsapp://send?text={{urlencode('Check out this post: '. route('posts.show', $post->slug) . ' #' . $post->title)}}" class="btn wa mb-2 mb-lg-0" style="background-color: green; color: white;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                <a href="whatsapp://send?text={{urlencode('Check out this post: '. route('post', $post->slug) . ' #' . $post->title)}}" class="btn wa mb-2 mb-lg-0" style="background-color: green; color: white;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(Request::url()) }}&picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn fb mb-2 mb-lg-0"><i class="bi bi-facebook"></i> Facebook</a>
-                <a href="https://www.instagram.com/?url={{ urlencode(Request::url()) }}& picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn ig mb-2 mb-lg-0"><i class="bi bi-instagram"></i> Instagram</a>
+				        <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::url()) }}&text={{ urlencode($post->title) }}&hashtags={{ urlencode($post->category->name) }}" class="btn tw mb-2 mb-lg-0"><i class="bi bi-twitter"></i> Twitter</a>
                 <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ urlencode(Request::url()) }}&title={{ urlencode($post->title) }}&summary={{ urlencode($post->excerpt) }}&source={{ urlencode(config('app.name')) }}&picture={{ urlencode(asset('storage/' . $post->image)) }}" class="btn in mb-2 mb-lg-0"><i class="bi bi-linkedin"></i> Linkedin</a>
                 <hr>
               </div>

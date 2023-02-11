@@ -28,7 +28,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
 Route::get('/blog', [PostController::class, 'index']);
-Route::get('/blog/{post:slug}', [PostController::class, 'show']);
+Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('post');
 Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
 Route::get('/galeri', [GaleryController::class, 'index']);
 
