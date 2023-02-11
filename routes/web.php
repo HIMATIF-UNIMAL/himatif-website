@@ -32,15 +32,7 @@ Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('post');
 Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
 Route::get('/galeri', [GaleryController::class, 'index']);
-Route::get('/toko', [ProductController::class, 'index']);
-
-// Route::get('/toko', function () {
-//     return view('toko', [
-//         'title' => 'Toko',
-//         'active' => 'toko',
-//         ''
-//     ]);
-// });
+// Route::get('/toko', [ProductController::class, 'index']);
 
 // Route::get('/events', function () {
 //     return view('events', [

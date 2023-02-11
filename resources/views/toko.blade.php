@@ -35,20 +35,22 @@
       <div class="row content toko-container justify-content-center">
 
         <div class="list">
-          @foreach ($products as $product)
-            <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
-              <div class="toko-wrap">
-                <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
-                <div class="toko-info">
-                  <div>
-                    <button class="btn btn-warning" type="button" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
+          @isset($products)
+            @foreach ($products as $product)
+              <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
+                <div class="toko-wrap">
+                  <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
+                  <div class="toko-info">
+                    <div>
+                      <button class="btn btn-warning" type="button" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
+                    </div>
                   </div>
                 </div>
+                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->title }}</a></h4>
+                <p>Rp {{ $product->price }}</p>
               </div>
-              <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->title }}</a></h4>
-              <p>Rp {{ $product->price }}</p>
-            </div>
-          @endforeach
+            @endforeach
+          @endisset
         </div>        
       </div>
     </div>
