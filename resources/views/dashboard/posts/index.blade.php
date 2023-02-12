@@ -26,7 +26,7 @@
 
             <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-striped" id="table-1">
+                <table class="table table-striped">
                 <thead>
                     <tr>
                     <th class="text-center">NO</th>
@@ -39,9 +39,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php
+                        $start = ($posts->currentPage() - 1) * $posts->perPage() + 1;
+                    ?>
                     @foreach ($posts as $post)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $start++ }}</td>
                             <td>
                                 <div class="gallery">
                                 <div class="gallery-item" data-image="{{ url('dbuser/assets/img/news/img03.jpg') }}" data-title="Image 1"></div>
@@ -66,6 +69,7 @@
                     </tr>
                 </tbody>
                 </table>
+                {{ $posts->appends(['start' => $start])->links() }}
             </div>
             </div>
         </div>

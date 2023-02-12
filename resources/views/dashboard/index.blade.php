@@ -129,7 +129,7 @@
                           <h4>Post</h4>
                         </div>
                         <div class="card-body">
-                          10
+                          {{ $posts->count() }}
                         </div>
                       </div>
                     </div>

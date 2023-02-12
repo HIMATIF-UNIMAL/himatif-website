@@ -46,8 +46,8 @@
                     </div>
                   </div>
                 </div>
-                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->title }}</a></h4>
-                <p>Rp {{ $product->price }}</p>
+                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->name }}</a></h4>
+                <p>Rp. {{ $product->price }}</p>
               </div>
             @endforeach
           @endisset

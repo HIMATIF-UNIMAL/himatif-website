@@ -20,10 +20,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'IPTEK GANTENG',
+            'name' => 'IPTEK HIMATIF',
             'username' => 'iptek2022',
             'email' => 'iptek@unimal.ac.id',
-            'password' => bcrypt('iptek2022')
+            'password' => bcrypt('iptek2022'),
+            'is_admin' => '1',
         ]);
 
         User::factory(5)->create();
@@ -47,9 +48,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Seminar',
             'slug' => 'seminar',
         ]);
+        Category::factory(5)->create();
 
         Post::factory(20)->create();
-        // Product::factory(10)->create();
+        Product::factory(10)->create();
 
         Comment::factory(100)->create();
     }

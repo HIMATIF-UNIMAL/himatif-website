@@ -20,7 +20,7 @@ class DashboardPostController extends Controller
     {
         // return Post::where('user_id', auth()->user()->id)->get();
         return view('dashboard.posts.index', [
-            'posts' => Post::latest()->where('user_id', auth()->user()->id)->get()
+            'posts' => Post::latest()->where('user_id', auth()->user()->id)->paginate(5)
         ]);
     }
 

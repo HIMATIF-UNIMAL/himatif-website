@@ -32,7 +32,7 @@ Route::get('/blog', [PostController::class, 'index']);
 Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('post');
 Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
 Route::get('/galeri', [GaleryController::class, 'index']);
-// Route::get('/toko', [ProductController::class, 'index']);
+Route::get('/toko', [ProductController::class, 'index']);
 
 // Route::get('/events', function () {
 //     return view('events', [
@@ -55,4 +55,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+Route::get('dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
