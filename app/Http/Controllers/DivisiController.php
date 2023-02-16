@@ -4,9 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Divisi;
+use stdClass;
 
 class DivisiController extends Controller
 {
+    public $meta;
+
+    public function __construct()
+    {
+        $this->meta = new stdClass();
+        $this->meta->keywords = 'divisi himatif unimal,  himatif unimal, himatif, unimal';
+        $this->meta->author = 'IPTEK HIMATIF UNIMAL';
+        $this->meta->description = 'Semua Divisi Himpunan Mahasiswa Teknik Informatika Universitas Malikussaleh.';
+        $this->meta->url = 'https://himatif.unimal.ac.id';
+        $this->meta->type = 'divisi';
+        $this->meta->image = 'https://himatif.unimal.ac.id/img/logo.png';
+    }
 
     public function show($divisi)
     {
@@ -32,8 +45,14 @@ class DivisiController extends Controller
         } else {
             $nama_divisi = 'Divisi Minat dan Bakat';
         }
+
+        $this->meta->keywords = 'divisi ' . $nama_divisi . ' himatif unimal, divisi himatif unimal, himatif unimal, himatif, unimal';
+        $this->meta->description = 'Divisi ' . $nama_divisi . ' Himpunan Mahasiswa Teknik Informatika Universitas Malikussaleh.';
+        $this->meta->url = 'https://himatif.unimal.ac.id/divisi/' . $nama_divisi;
+
         return view('divisi', [
             'title' => $nama_divisi,
+            'meta' => $this->meta,
             'active' => 'profile',
             'nama_divisi' => $nama_divisi,
             'divisi' => Divisi::find($divisi)

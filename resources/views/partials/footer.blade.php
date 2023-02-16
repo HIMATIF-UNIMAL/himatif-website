@@ -16,8 +16,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/sejarah">Sejarah</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="/blog">Blog</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/event">Event</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/prestasi">Prestasi</a></li>
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="/event">Event</a></li> --}}
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="/prestasi">Prestasi</a></li> --}}
               <li><i class="bx bx-chevron-right"></i> <a href="/galeri">Galeri</a></li>
             </ul>
           </div>
@@ -26,11 +26,11 @@
             <h4>Services</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="/toko">Himatif Shop</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">LMS Himatif</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="http://ikatif.unimal.ac.id">Ikatif</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="http://permikomnas.or.id">Permikomnas</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="http://informatika.unimal.ac.id">Teknik Informatika</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="http://unimal.ac.id">Universitas Malikussaleh</a></li>
+              {{-- <li><i class="bx bx-chevron-right"></i> <a href="#">LMS Himatif</a></li> --}}
+              <li><i class="bx bx-chevron-right"></i> <a href="http://ikatif.unimal.ac.id" target="_blank">Ikatif</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://permikomnas.or.id" target="_blank">Permikomnas</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://informatika.unimal.ac.id" target="_blank">Teknik Informatika</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://unimal.ac.id" target="_blank">Universitas Malikussaleh</a></li>
             </ul>
           </div>
 
@@ -40,10 +40,10 @@
               Lantai II Gedung Teknik Informatika
               Lhokseumawe, Indonesia </p>
               <div class="sosmed pt-3">
-                <a href="#" class="p-2"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="p-2"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="p-2"><i class="bi bi-youtube"></i></a>
-                <a href="#" class="p-2"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.facebook.com/HimatifUM/" target="_blank" class="p-2"><i class="bi bi-facebook"></i></a>
+                <a href="https://instagram.com/himatifunimal?igshid=YmMyMTA2M2Y=" target="_blank" class="p-2"><i class="bi bi-instagram"></i></a>
+                <a href="https://youtube.com/@HIMATIFUNIMAL" target="_blank" class="p-2"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.tiktok.com/@himatifunimal_?_t=8ZpVOfgUStm&_r=1" target="_blank" class="p-2"><i class="bi bi-tiktok"></i></a>
               </div>
           </div>
 

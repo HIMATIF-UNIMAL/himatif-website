@@ -91,7 +91,8 @@ class AdminCategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        Category::destroy($category->id);
+        return redirect()->route('categories.index')->with('success', 'Category deleted successfully');
     }
 
     public function checkSlug(Request $request)

@@ -26,7 +26,7 @@
                 <li><a class="nav-link" href="#">IPTEK dan Kajian Ilmiah</a></li>
             </ul>
             </li> --}}
-            <li class="nav-item dropdown {{ Request::is('dashboard/posts*') ? 'active' : '' }}">
+            <li class="nav-item dropdown {{ Request::is('dashboard/posts*') || Request::is('dashboard/categories*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-newspaper"></i> <span>Blog</span></a>
             <ul class="dropdown-menu">
                 @can('admin')

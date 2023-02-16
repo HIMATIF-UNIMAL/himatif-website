@@ -103,7 +103,7 @@
     const title = document.getElementById('title');
     const slug = document.getElementById('slug');
 
-    title.addEventListener('change', function(e) {
+    title.addEventListener('keyup', function(e) {
       fetch('/dashboard/posts/checkSlug?title=' + title.value)
         .then(response => response.json())
         .then(data => slug.value = data.slug)
