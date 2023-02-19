@@ -39,7 +39,7 @@
             @foreach ($products as $product)
               <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
                 <div class="toko-wrap">
-                  <img src="img/product-03-290x372.jpg" class="img-fluid" alt="">
+                  <img src="{{ $product->image }}" class="img-fluid" alt="{{ $product->name }}" width="290" height="372">
                   <div class="toko-info">
                     <div>
                       <button class="btn btn-warning" type="button" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>
@@ -94,9 +94,9 @@
         return product.id === parseInt(productId);
       });
 
-      document.querySelector('.modal-body h4').innerHTML = product.title;
+      document.querySelector('.modal-body h4').innerHTML = product.name;
       document.querySelector('.modal-body h5').innerHTML = 'Rp. ' + product.price;
-      document.querySelector('.modal-body img').src = "img/product-03-290x372.jpg";
+      document.querySelector('.modal-body img').src = product.image;
       // document.querySelector('.modal-body img').src = product.image;
       document.querySelector('.modal-body p').innerHTML ='Deskripsi : <br>' + product.description;
       document.querySelector('.modal-body .d-grid a').href = "https://api.whatsapp.com/send?phone=6287798747798&text=Assalamu'alaikum%20Kak%20Saya%20ingin%20bertanya%20seputar%20produk%20" + product.title + "%20dari%20HIMATIF%20Shop";

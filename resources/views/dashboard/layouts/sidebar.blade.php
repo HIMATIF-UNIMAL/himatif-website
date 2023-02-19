@@ -12,13 +12,13 @@
             <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Main Menu</li>
-            {{-- <li class="nav-item dropdown">
-            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i> <span>Shop</span></a>
+            <li class="nav-item dropdown {{ Request::is('dashboard/products*') ? 'active' : '' }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i> <span>Shop</span></a>
             <ul class="dropdown-menu">
                 <li><a class="nav-link" href="#">Tambah Produk</a></li>
-                <li><a class="nav-link" href="#">Produk</a></li>
+                <li class="{{ Request::is('dashboard/products') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products">Produk</a></li>
             </ul>
-            </li> --}}
+            </li>
             {{-- <li class="nav-item dropdown">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i> <span>Pengurus</span></a>
             <ul class="dropdown-menu">

@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -28,9 +29,13 @@ use App\Http\Controllers\ProductController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/sejarah', [SejarahController::class, 'index']);
 Route::get('/divisi/{divisi}', [DivisiController::class, 'show']);
-Route::get('/blog', [PostController::class, 'index']);
-Route::get('/blog/{post:slug}', [PostController::class, 'show'])->name('post');
-Route::post('/blog/{post:slug}/comments', [PostController::class, 'storeComment']);
+
+Route::controller(PostController::class)->group(function () {
+    Route::get('/blog', 'index');
+    Route::get('/blog/{post:slug}', 'show')->name('post');
+    Route::post('/blog/{post:slug}/comments', 'storeComment');
+});
+
 Route::get('/galeri', [GaleryController::class, 'index']);
 Route::get('/toko', [ProductController::class, 'index']);
 
@@ -48,12 +53,22 @@ Route::get('/toko', [ProductController::class, 'index']);
 //     ]);
 // });
 
+Route::controller(LoginController::class)->group(function () {
+    Route::get('/login', 'index')->name('login')->middleware('guest');
+    Route::post('/login', 'authenticate');
+    Route::get('/logout', 'logout')->middleware('auth');
+});
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate']);
-Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::get('dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-Route::get('dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
+
+Route::middleware('auth')->group(function () {
+    Route::resource('/dashboard/posts', DashboardPostController::class);
+    Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
+});
+
+Route::prefix('dashboard/categories')->middleware(['auth', 'admin'])->name('categories.')->group(function () {
+    Route::get('checkSlug', [AdminCategoryController::class, 'checkSlug']);
+    Route::resource('', AdminCategoryController::class)->except('show');
+});
+
+Route::resource('/dashboard/products', DashboardProductController::class)->middleware('auth');
