@@ -17,9 +17,14 @@
             <div class="card-header">
               <h4>Data Produk</h4>
             </div>
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-striped" id="table-1">
+                <table class="table table-striped">
                   <thead>
                     <tr>
                       <th class="text-center">NO</th>
@@ -31,16 +36,19 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @php
+                      $start = ($products->currentPage() - 1) * $products->perPage() + 1;
+                    @endphp
                     @foreach ($products as $product)
                     <tr>
-                      <td>1</td>
+                      <td>{{ $start++ }}</td>
                       <td>
                         <div class="gallery">
-                          <div class="gallery-item" data-image="{{ $product->image }}" data-title="Image 1"></div>
+                          <div class="gallery-item" data-image="{{ asset('dbuser/assets/img/products/product-1.jpg') }}" data-title="{{ $product->name }}"></div>
                         </div>                            
                       </td>
                       <td>{{ $product->name }}</td>
-                      <td>{{ $product->description }}</td>
+                      <td>{!! $product->description !!}</td>
                       <td>Rp.{{ $product->price }}</td>
                       <td>
                         <div class="btn-group mb-3" role="group" aria-label="Basic example">
@@ -50,25 +58,9 @@
                       </td>
                     </tr>
                     @endforeach
-                    {{-- <tr>
-                      <td>1</td>
-                      <td>
-                        <div class="gallery">
-                          <div class="gallery-item" data-image="{{ asset('dbuser/assets/img/news/img03.jpg') }}" data-title="Image 1"></div>
-                        </div>     
-                      </td>
-                      <td>viesta</td>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sunt quibusdam nisi laudantium velit blanditiis aperiam reiciendis facilis ipsa eos minus, deleniti omnis doloribus! Quisquam quia nobis quidem sunt culpa!</td>
-                      <td>Rp.20,000</td>
-                      <td>
-                        <div class="btn-group mb-3" role="group" aria-label="Basic example">
-                          <button type="button" data-toggle="modal" data-target="#edit" class="btn btn-warning"><i class="fas fa-pen-alt"></i></button>
-                          <a href="" type="button" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </td>
-                    </tr> --}}
                   </tbody>
                 </table>
+                {{ $products->appends(['start' => $start])->links() }}
               </div>
             </div>
           </div>

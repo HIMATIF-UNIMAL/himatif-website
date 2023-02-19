@@ -15,7 +15,7 @@
             <li class="nav-item dropdown {{ Request::is('dashboard/products*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i> <span>Shop</span></a>
             <ul class="dropdown-menu">
-                <li><a class="nav-link" href="#">Tambah Produk</a></li>
+                <li class="{{ Request::is('dashboard/products/create') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products/create">Tambah Produk</a></li>
                 <li class="{{ Request::is('dashboard/products') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products">Produk</a></li>
             </ul>
             </li>

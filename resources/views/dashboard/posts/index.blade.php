@@ -39,9 +39,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
+                    @php
                         $start = ($posts->currentPage() - 1) * $posts->perPage() + 1;
-                    ?>
+                    @endphp
                     @foreach ($posts as $post)
                         <tr>
                             <td>{{ $start++ }}</td>

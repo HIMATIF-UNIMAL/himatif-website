@@ -27,7 +27,7 @@ class ProductController extends Controller
             'title' => 'HIMATIF UNIMAL Shop',
             'meta' => $this->meta,
             'active' => 'toko',
-            'products' => Product::latest()->get()
+            'products' => Product::latest()->paginate(8)
         ]);
     }
 }

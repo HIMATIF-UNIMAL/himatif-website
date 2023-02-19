@@ -26,7 +26,7 @@ class DashboardProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.products.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class DashboardProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric|between:0,10000000',
+            'description' => 'required',
+            'image' => 'image|file|max:2048',
+        ]);
+
+        Product::create($validatedData);
+
+        return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
     /**
