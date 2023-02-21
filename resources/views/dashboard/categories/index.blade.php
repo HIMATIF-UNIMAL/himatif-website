@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.main')    
     
 @section('container')
+<div class="main-content">
     <section class="section">
         <div class="section-header">
         <h1>Kategori/Tags</h1>
@@ -155,6 +156,7 @@
         </div>
         </div>
     </section>
+</div>
     <script>
         const name = document.querySelector('#name');
         const slug = document.querySelector('#slug');

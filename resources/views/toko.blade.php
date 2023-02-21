@@ -87,7 +87,7 @@
 </div>
 
 <script>
-  const products = @json($products);
+  const products = @json($products).data;
   document.querySelectorAll('.btn-warning').forEach(function(button) {
     button.addEventListener('click', function() {
       const productId = this.getAttribute('data-id');
@@ -97,7 +97,7 @@
 
       document.querySelector('.modal-body h4').innerHTML = product.name;
       document.querySelector('.modal-body h5').innerHTML = 'Rp. ' + product.price;
-      document.querySelector('.modal-body img').src = "img/product-03-290x372.jpg";
+      document.querySelector('.modal-body img').src = "img/product-contoh.jpg";
       // document.querySelector('.modal-body img').src = product.image;
       document.querySelector('.modal-body p').innerHTML ='Deskripsi : <br>' + product.description;
       document.querySelector('.modal-body .d-grid a').href = "https://api.whatsapp.com/send?phone=6287798747798&text=Assalamu'alaikum%20Kak%20Saya%20ingin%20bertanya%20seputar%20produk%20" + product.name + "%20dari%20HIMATIF%20Shop";

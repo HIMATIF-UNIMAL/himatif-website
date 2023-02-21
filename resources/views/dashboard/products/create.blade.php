@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.main')    
     
 @section('container')
+<div class="main-content">
   <section class="section">
     <div class="section-header">
       <h1>Tambah Produk</h1>
@@ -72,4 +73,5 @@
       </div>
     </div>
   </section>
+</div>
 @endsection

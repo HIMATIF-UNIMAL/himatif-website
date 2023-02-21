@@ -1,6 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
+<div class="main-content">
   <section class="section">
     <div class="section-header">
       <h1>Edit Post</h1>
@@ -104,6 +105,7 @@
       </div>
     </div>
   </section>
+</div>
 
   <script>
     const title = document.getElementById('title');

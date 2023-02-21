@@ -32,9 +32,7 @@
       @include('dashboard.layouts.sidebar')
 
       <!-- Main Content -->
-      <div class="main-content">
         @yield('container')
-      </div>
       
       @include('dashboard.layouts.footer')
 
