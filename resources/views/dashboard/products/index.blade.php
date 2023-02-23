@@ -50,10 +50,10 @@
                       </td>
                       <td>{{ $product->name }}</td>
                       <td>{!! $product->description !!}</td>
-                      <td>Rp.{{ $product->price }}</td>
+                      <td>Rp {{ number_format($product->price, 0, ',', '.') }}</td>
                       <td>
                         <div class="btn-group mb-3" role="group" aria-label="Basic example">
-                          <a href="/dashboard/products/{{ $product->id }}/edit" type="button" data-toggle="modal" data-target="#edit" class="btn btn-warning" ><i class="fas fa-pen-alt"></i></a>
+                          <a href="/dashboard/products/{{ $product->id }}/edit" type="button" class="btn btn-warning" ><i class="fas fa-pen-alt"></i></a>
                           <form action="/dashboard/products/{{ $product->id }}" method="post">
                             @csrf
                             @method('delete')
@@ -74,9 +74,9 @@
     </div>
   </section>
 </div>
-
+@endsection
  <!-- Modal Edit -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+{{-- <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -131,97 +131,6 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           <button type="submit"  class="btn btn-success">Simpan</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-@endsection
-
-
-<!-- Modal tambah -->
-{{-- <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Edit Produk</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="" method="post">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" class="form-control" name="" required>
-              </div>
-              <div class="form-group">
-                <label>Harga</label>
-                <input type="number" class="form-control" name="" required>
-              </div>
-              <div class="form-group">
-                <label>Gambar</label>
-                <input type="file"  class="form-control" name="" required>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label>Deskripsi</label>
-                <textarea class="summernote form-control"></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type=""  class="btn btn-success">Simpan</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div> --}}
-
- <!-- Modal Edit -->
-{{-- <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Edit Produk</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="" method="post">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label>Nama</label>
-                <input type="text" class="form-control" name="" value="" required>
-              </div>
-              <div class="form-group">
-                <label>Harga</label>
-                <input type="number" class="form-control" name="" value="" required>
-              </div>
-              <div class="form-group">
-                <label>Gambar</label>
-                <input type="file"  class="form-control" name="" value="" required>
-                <small class="text-success">Gambar: contoh.jpg</small>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label>Deskripsi</label>
-                <textarea class="summernote form-control"></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type=""  class="btn btn-success">Simpan</button>
         </div>
       </form>
     </div>

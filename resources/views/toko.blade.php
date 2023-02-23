@@ -47,7 +47,7 @@
                   </div>
                 </div>
                 <h4><a href="#" data-bs-toggle="modal" data-bs-target="#beli" class="name">{{ $product->name }}</a></h4>
-                <p>Rp. {{ $product->price }}</p>
+                <p>Rp {{ number_format($product->price, 0, ',', '.') }}</p>
               </div>
             @endforeach
           @endisset

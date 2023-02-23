@@ -68,7 +68,9 @@ class DashboardProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('dashboard.products.edit', [
+            'product' => $product
+        ]);
     }
 
     /**
@@ -80,7 +82,16 @@ class DashboardProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required|numeric|between:0,10000000',
+            'description' => 'required',
+            'image' => 'image|file|max:2048',
+        ]);
+
+        Product::whereId($product->id)->update($validatedData);
+
+        return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
 
     /**
