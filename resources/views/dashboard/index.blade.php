@@ -23,7 +23,7 @@
       </div>
       <div class="row">
         <div class="col-lg-8">
-          <div class="row">
+          {{-- <div class="row">
             <div class="col-md-6 col-sm-6 col-12">
               <div class="card card-statistic-2">
                 <div class="card-icon shadow-primary bg-primary">
@@ -64,12 +64,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="row">
             <div class="col-12">
               <div class="card card-primary">
                 <div class="card-header">
-                  <h4 class="text-primary">Postingan Terpopuler</h4>
+                  <h4 class="text-primary">Postingan Terbaru</h4>
                 </div>
                 <div class="card-body p-0">
                   <div class="table-responsive table-invoice">
@@ -78,40 +78,21 @@
                         <th>NO</th>
                         <th>Judul</th>
                         <th>Kategori</th>
-                        <th>Pengunjung</th>
+                        <th>Komentar</th>
                       </tr>
-                      <tr>
-                        <td>1</td>
-                        <td class="font-weight-600" width="50%">BUKU IPA KLS IX SM 2</td>
-                        <td>Mata Pelajaran</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td class="font-weight-600" width="50%">BUKU IPA KELAS IX</td>
-                        <td>Mata Pelajaran</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td class="font-weight-600" width="50%">BUKU AGAMA KRISTEN KELAS IX</td>
-                        <td>Mata Pelajaran</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td class="font-weight-600" width="50%">BUKU AGAMA ISLAM KELAS IX</td>
-                        <td>Mata Pelajaran</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td class="font-weight-600" width="50%">BUKU PPKN KLS IX</td>
-                        <td>Mata Pelajaran</td>
-                        <td>2</td>
-                      </tr>
+                      @foreach ($posts as $post)
+                          <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td class="font-weight-600" width="50%">{{ $post->title }}</td>
+                            <td>{{ $post->category->name }}</td>
+                            <td>{{ $post->comments->count() }}</td>
+                          </tr>
+                      @endforeach
                       </tbody>
                     </table>
+                    <div class="ml-4">
+                      {{ $posts->links() }}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -130,7 +111,7 @@
                     <h4>Post</h4>
                   </div>
                   <div class="card-body">
-                    {{ $posts->count() }}
+                    {{ $totalPosts }}
                   </div>
                 </div>
               </div>
@@ -145,7 +126,7 @@
                     <h4>Event</h4>
                   </div>
                   <div class="card-body">
-                    42
+                    0
                   </div>
                 </div>
               </div>
@@ -160,13 +141,13 @@
                     <h4>Shop</h4>
                   </div>
                   <div class="card-body">
-                    1,201
+                    {{ $products->count() }}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="card">
+          {{-- <div class="card">
             <div class="card-header">
               <h4>Log Aktivitas</h4>
             </div>
@@ -222,7 +203,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

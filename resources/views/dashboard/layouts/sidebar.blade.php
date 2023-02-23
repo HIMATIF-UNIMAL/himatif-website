@@ -16,7 +16,7 @@
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i> <span>Shop</span></a>
             <ul class="dropdown-menu">
                 <li class="{{ Request::is('dashboard/products/create') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products/create">Tambah Produk</a></li>
-                <li class="{{ Request::is('dashboard/products') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products">Produk</a></li>
+                <li class="{{ Request::is('dashboard/products') || Request::is('dashboard/products/*/edit') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/products">Produk</a></li>
             </ul>
             </li>
             {{-- <li class="nav-item dropdown">
@@ -33,7 +33,7 @@
                     <li class="{{ Request::is('dashboard/categories') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/categories">Kategori/Tags</a></li>
                 @endcan
                 <li class="{{ Request::is('dashboard/posts/create') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
-                <li class="{{ Request::is('dashboard/posts') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
+                <li class="{{ Request::is('dashboard/posts') || Request::is('dashboard/posts/*/edit') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
                 <li><a class="nav-link" href="#">Komentar</a></li>
             </ul>
             </li>

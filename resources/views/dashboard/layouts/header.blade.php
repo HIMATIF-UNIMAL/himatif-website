@@ -6,67 +6,67 @@
         </ul>
     </form>
         <ul class="navbar-nav navbar-right">
-            <a href="#"class="nav-link nav-link-lg"><i class="fas fa-globe"></i></a>
+            {{-- <a href="#"class="nav-link nav-link-lg"><i class="fas fa-globe"></i></a>
             <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                <div class="dropdown-header">Komentar Pending
+                <div class="dropdown-menu dropdown-list dropdown-menu-right">
+                    <div class="dropdown-header">Komentar Pending
+                    </div>
+                    <div class="dropdown-list-content dropdown-list-message">
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time">22 Maret 2022</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time">22 Maret 2022</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time ">22 Maret 2022</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time">22 Maret 2022</div>
+                        </div>
+                    </a>
+                    <a href="#" class="dropdown-item dropdown-item-unread">
+                        <div class="dropdown-item-avatar">
+                        <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
+                        </div>
+                        <div class="dropdown-item-desc">
+                        <b>Kusnaedi</b>
+                        <p>Hello, Bro!</p>
+                        <div class="time">22 Maret 2022</div>
+                        </div>
+                    </a>
+                    </div>
+                    <div class="dropdown-footer text-center">
+                    <a href="#">Selengkapnya <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
-                <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                    <div class="dropdown-item-avatar">
-                    <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
-                    </div>
-                    <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">22 Maret 2022</div>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                    <div class="dropdown-item-avatar">
-                    <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
-                    </div>
-                    <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">22 Maret 2022</div>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                    <div class="dropdown-item-avatar">
-                    <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
-                    </div>
-                    <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time ">22 Maret 2022</div>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                    <div class="dropdown-item-avatar">
-                    <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
-                    </div>
-                    <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">22 Maret 2022</div>
-                    </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                    <div class="dropdown-item-avatar">
-                    <figure class="avatar mr-2 avatar-md bg-light text-dark" data-initial="K"></figure>
-                    </div>
-                    <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b>
-                    <p>Hello, Bro!</p>
-                    <div class="time">22 Maret 2022</div>
-                    </div>
-                </a>
-                </div>
-                <div class="dropdown-footer text-center">
-                <a href="#">Selengkapnya <i class="fas fa-chevron-right"></i></a>
-                </div>
-            </div>
             </li>
             <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-envelope"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
@@ -126,7 +126,7 @@
                 <a href="#">Selengkapnya<i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
-            </li>
+            </li> --}}
             <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="{{ url('dbuser/assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">{{ auth()->user()->name }}</div></a>
