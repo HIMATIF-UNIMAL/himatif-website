@@ -51,7 +51,7 @@
                 <article class="thumb">
                 <div style="max-height: 400px; overflow:hidden;">
                   @if ($posts[0]->image)
-                    <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="" class="img-fluid">
+                    <img src="{{ asset('storage/' . $posts[0]->image) }}" alt="{{ $posts[0]->title }}" class="img-fluid">
                   @else
                     <img src="{{ url('img/contoh.jpg') }}" class="highlight" alt="...">
                   @endif

@@ -22,11 +22,6 @@
                     <form action="/dashboard/categories" method="post">
                         @csrf
                         <div class="form-group">
-                            @if (session('success'))
-                                <div class="alert alert-success">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
                         <div class="input-group mb-3">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Jenis Kategori" id="name" name="name" required autofocus value="{{ old('name') }}">
                             @error('name')
@@ -55,6 +50,11 @@
                 <h4>Kategori</h4>
                 </div>
                 <div class="card-body">
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
@@ -161,7 +161,7 @@
         const name = document.querySelector('#name');
         const slug = document.querySelector('#slug');
 
-        name.addEventListener('keyup', function() {
+        name.addEventListener('change', function() {
             fetch('/dashboard/categories/checkSlug?name=' + name.value)
                 .then(response => response.json())
                 .then(data => slug.value = data.slug)

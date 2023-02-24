@@ -55,7 +55,7 @@
                                         @endif
                                     </div>
                                 </td>
-                                <td>{{ $post->category->name }}</td>
+                                <td>{{ $post->category->name ?? '' }}</td>
                                 <td>{{ $post->title }}</td>
                                 <td>0</td>
                                 <td>{{ $post->comments->count() }}</td>

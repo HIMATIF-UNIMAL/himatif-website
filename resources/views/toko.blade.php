@@ -39,11 +39,11 @@
             @foreach ($products as $product)
               <div class="col-lg-3 col-md-6 toko-item filter-app mb-5">
                 <div class="toko-wrap">
-                  @if ($product->image)
-                    <img src="{{ asset('storage/' . $product->image) }}" class="img-fluid" alt="{{ $product->name }}" width="290" height="372"> 
-                  @else
-                    <img src="{{ asset('img/product-contoh.jpg') }}" class="img-fluid" alt="{{ $product->name }}" width="290" height="372">  
-                  @endif                 
+                    @if ($product->image)
+                      <img src="{{ asset('storage/' . $product->image) }}" class="img-fluid" alt="{{ $product->name }}" width="290" height="372"> 
+                    @else
+                      <img src="{{ asset('img/product-contoh.jpg') }}" class="img-fluid" alt="{{ $product->name }}" width="290" height="372">  
+                    @endif                 
                   <div class="toko-info">
                     <div>
                       <button class="btn btn-warning" type="button" data-id="{{ $product->id }}" data-bs-toggle="modal" data-bs-target="#beli"><i class="bi bi-cart"></i></button>

@@ -47,9 +47,9 @@
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="Category">Kategori</label>
                   <div class="col-sm-12 col-md-7">
-                    <select class="form-control select2" name="category_id">
+                    <select class="form-control select2" name="category_id" required>
                       <option selected>Pilih Kategori</option>
-                      @foreach ($categories as $category)
+                      @foreach ($categories->reverse() as $category)
                         @if (old('category_id', $post->category_id) == $category->id)
                           <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
                         @else
@@ -59,7 +59,7 @@
                     </select>
                     @error('category_id')
                       <span class="invalid" role="alert">
-                        <small class="text-danger">{{ $message }}</small>
+                        <small class="text-danger">Silahkan pilih kategori terlebih dahulu</small>
                       </span>
                     @enderror
                   </div>
