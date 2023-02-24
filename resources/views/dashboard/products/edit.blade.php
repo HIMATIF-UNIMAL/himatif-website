@@ -19,7 +19,7 @@
               <h4>Form Edit Produk</h4>
             </div>
             <div class="card-body">
-              <form action="/dashboard/products/{{ $product->id }}" method="post">
+              <form action="/dashboard/products/{{ $product->id }}" method="post" enctype="multipart/form-data">
                 @method('put')
                 @csrf
                 <div class="form-group row mb-4">
@@ -45,9 +45,20 @@
                   </div>
                 </div>
                 <div class="form-group row mb-4">
-                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
+                  <label for="image" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar Produk</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="file" name=""class="form-control">
+                    <input type="hidden" name="oldImage" value="{{ $product->image }}">
+                    @if ($product->image)
+                      <img src="{{ asset('storage/' . $product->image) }}" class="img-preview img-fluid mb-3 col-sm-5">
+                    @else
+                      <img class="img-preview img-fluid mb-3 col-sm-5">   
+                    @endif
+                    <input type="file" accept="image/*" name="image" id="image" class="form-control @error('image') is-invalid @enderror" onchange="previewImage()">
+                    @error('image')
+                      <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                      </span>
+                    @enderror
                   </div>
                 </div>
                 <div class="form-group row mb-4">
@@ -95,6 +106,21 @@
   var priceValue = priceInput.value;
   priceValue = priceValue.replace(/\./g, ''); // hapus semua titik
   priceInput.value = priceValue;
-});
+  });
+
+  // Fungsi untuk menampilkan preview gambar
+  function previewImage() {
+    const image = document.querySelector('#image');
+    const imgPreview = document.querySelector('.img-preview');
+
+    imgPreview.style.display = 'block'; 
+
+    const oFReader = new FileReader();
+    oFReader.readAsDataURL(image.files[0]);
+
+    oFReader.onload = function(oFREvent) {
+      imgPreview.src = oFREvent.target.result;
+    };
+  }
 </script>
 @endsection

@@ -46,7 +46,8 @@
                 <div class="form-group row mb-4">
                   <label for="image" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar Produk</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="file" accept="image/*" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
+                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                    <input type="file" accept="image/*" name="image" id="image" class="form-control @error('image') is-invalid @enderror" onchange="previewImage()">
                     @error('image')
                       <span class="invalid-feedback" role="alert">
                         {{ $message }}
@@ -99,6 +100,21 @@
   var priceValue = priceInput.value;
   priceValue = priceValue.replace(/\./g, ''); // hapus semua titik
   priceInput.value = priceValue;
-});
+  });
+
+  // Fungsi untuk menampilkan preview gambar
+  function previewImage() {
+    const image = document.querySelector('#image');
+    const imgPreview = document.querySelector('.img-preview');
+
+    imgPreview.style.display = 'block'; 
+
+    const oFReader = new FileReader();
+    oFReader.readAsDataURL(image.files[0]);
+
+    oFReader.onload = function(oFREvent) {
+      imgPreview.src = oFREvent.target.result;
+    };
+  }
 </script>
 @endsection
