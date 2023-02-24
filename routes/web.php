@@ -61,14 +61,10 @@ Route::controller(LoginController::class)->group(function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
-Route::middleware('auth')->group(function () {
-    Route::resource('/dashboard/posts', DashboardPostController::class);
-    Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
-});
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
-Route::prefix('dashboard/categories')->middleware(['auth', 'admin'])->name('categories.')->group(function () {
-    Route::get('checkSlug', [AdminCategoryController::class, 'checkSlug']);
-    Route::resource('', AdminCategoryController::class)->except('show');
-});
+Route::get('dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
+Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
 Route::resource('/dashboard/products', DashboardProductController::class)->middleware('auth');

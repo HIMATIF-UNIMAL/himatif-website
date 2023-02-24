@@ -67,7 +67,7 @@
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="image">Gambar</label>
                   <div class="col-sm-12 col-md-7">
                     <img class="img-preview img-fluid mb-3 col-sm-5">
-                    <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image" onchange="previewImage()">
+                    <input type="file" accept="image/*" name="image" class="form-control @error('image') is-invalid @enderror" id="image" onchange="previewImage()">
                     @error('image')
                       <span class="invalid-feedback" role="alert">
                         {{ $message }}
@@ -105,7 +105,7 @@
     const title = document.getElementById('title');
     const slug = document.getElementById('slug');
 
-    title.addEventListener('keyup', function(e) {
+    title.addEventListener('change', function(e) {
       fetch('/dashboard/posts/checkSlug?title=' + title.value)
         .then(response => response.json())
         .then(data => slug.value = data.slug)

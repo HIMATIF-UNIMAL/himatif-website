@@ -45,7 +45,11 @@
                       <td>{{ $start++ }}</td>
                       <td>
                         <div class="gallery">
-                          <div class="gallery-item" data-image="{{ asset('dbuser/assets/img/products/product-1.jpg') }}" data-title="{{ $product->name }}"></div>
+                          @if ($product->image)
+                            <div class="gallery-item" data-image="{{ asset('storage/' . $product->image) }}" data-title="{{ $product->name }}"></div>
+                          @else
+                            <div class="gallery-item" data-image="{{ asset('dbuser/assets/img/products/product-1.jpg') }}" data-title="{{ $product->name }}"></div>
+                          @endif    
                         </div>                            
                       </td>
                       <td>{{ $product->name }}</td>

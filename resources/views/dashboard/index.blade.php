@@ -80,18 +80,21 @@
                         <th>Kategori</th>
                         <th>Komentar</th>
                       </tr>
+                      @php
+                        $start = ($posts->currentPage() - 1) * $posts->perPage() + 1;
+                      @endphp
                       @foreach ($posts as $post)
-                          <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td class="font-weight-600" width="50%">{{ $post->title }}</td>
-                            <td>{{ $post->category->name }}</td>
-                            <td>{{ $post->comments->count() }}</td>
-                          </tr>
+                        <tr>
+                          <td>{{ $start++ }}</td>
+                          <td class="font-weight-600" width="50%">{{ $post->title }}</td>
+                          <td>{{ $post->category->name }}</td>
+                          <td>{{ $post->comments->count() }}</td>
+                        </tr>
                       @endforeach
                       </tbody>
                     </table>
                     <div class="ml-4">
-                      {{ $posts->links() }}
+                      {{ $posts->appends(['start' => $start])->links() }}
                     </div>
                   </div>
                 </div>

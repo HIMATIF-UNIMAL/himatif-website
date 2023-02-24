@@ -19,7 +19,7 @@
               <h4>Form tambah Produk</h4>
             </div>
             <div class="card-body">
-              <form action="/dashboard/products" method="post">
+              <form action="/dashboard/products" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group row mb-4">
                   <label for="name" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama</label>
@@ -44,9 +44,14 @@
                   </div>
                 </div>
                 <div class="form-group row mb-4">
-                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar</label>
+                  <label for="image" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Gambar Produk</label>
                   <div class="col-sm-12 col-md-7">
-                    <input type="file" name=""class="form-control">
+                    <input type="file" accept="image/*" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
+                    @error('image')
+                      <span class="invalid-feedback" role="alert">
+                        {{ $message }}
+                      </span>
+                    @enderror
                   </div>
                 </div>
                 <div class="form-group row mb-4">

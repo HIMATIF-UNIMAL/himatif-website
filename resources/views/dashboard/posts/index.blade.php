@@ -48,7 +48,11 @@
                                 <td>{{ $start++ }}</td>
                                 <td>
                                     <div class="gallery">
-                                    <div class="gallery-item" data-image="{{ url('dbuser/assets/img/news/img03.jpg') }}" data-title="Image 1"></div>
+                                        @if ($post->image)
+                                            <div class="gallery-item" data-image="{{ url('storage/' . $post->image) }}" data-title="Image 1"></div>            
+                                        @else
+                                            <div class="gallery-item" data-image="{{ url('dbuser/assets/img/news/img03.jpg') }}" data-title="Image 1"></div> 
+                                        @endif
                                     </div>
                                 </td>
                                 <td>{{ $post->category->name }}</td>

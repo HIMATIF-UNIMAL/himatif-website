@@ -37,12 +37,18 @@ class DashboardProductController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request->file('image')->store('product-images');
+
         $validatedData = $request->validate([
             'name' => 'required|max:255',
             'price' => 'required|numeric|between:0,10000000',
             'description' => 'required',
             'image' => 'image|file|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+            $validatedData['image'] = $request->file('image')->store('product-images');
+        }
 
         Product::create($validatedData);
 

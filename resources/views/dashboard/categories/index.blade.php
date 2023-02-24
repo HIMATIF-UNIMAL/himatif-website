@@ -66,9 +66,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
+                            @php
                                 $start = ($categories->currentPage() - 1) * $categories->perPage() + 1;
-                            ?>
+                            @endphp
                             @foreach ($categories as $category)
                                 <tr>
                                 <td>{{ $start++ }}</td>
