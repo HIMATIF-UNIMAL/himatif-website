@@ -99,13 +99,27 @@
                 <h4>Tambah Tags</h4>
                 </div>
                 <div class="card-body">
-                <form action="" method="post">
+                <form action="/dashboard/tags" method="post">
+                    @csrf
                     <div class="form-group">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Jenis Tags" aria-label="" name="" required>
-                        <div class="input-group-append">
-                        <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i> Tambah</button>
-                        </div>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Jenis Tag" id="name" name="name" required autofocus value="{{ old('name') }}">
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                {{ $message }}
+                            </span> 
+                            @enderror
+                            {{-- input slug hidden --}}
+                            <input type="text" class="form-control @error('slug') is-invalid @enderror" placeholder="Slug" id="slug" name="slug" required value="{{ old('slug') }}">
+                            @error('slug')
+                            <span class="invalid-feedback" role="alert">
+                                {{ $message }}
+                            </span>
+                            @enderror
+                            {{-- end input slug hidden --}}
+                            <div class="input-group-append">
+                            <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i> Tambah</button>
+                            </div>
                     </div>
                     </div>
                 </form> 
@@ -134,6 +148,16 @@
                         <td class="text-right">
                             <div class="btn-group mb-3" role="group" aria-label="Basic example">
                             <a href="a.html" type="button" class="btn btn-danger btn-del" ><i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>2</td>
+                        <td>Teknologi</td>
+                        <td>5</td>
+                        <td class="text-right">
+                            <div class="btn-group mb-3" role="group" aria-label="Basic example">
+                            <a href="" type="button" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </td>
                         </tr>

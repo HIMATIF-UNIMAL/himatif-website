@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Str;
@@ -33,6 +34,7 @@ class DashboardPostController extends Controller
     {
         return view('dashboard.posts.create', [
             'categories' => Category::all(),
+            'tags' => Tag::all(),
         ]);
     }
 
@@ -50,7 +52,8 @@ class DashboardPostController extends Controller
             'slug' => 'required|max:255|unique:posts',
             'category_id' => 'required|exists:categories,id',
             'image' => 'image|file|max:2048',
-            'body' => 'required'
+            'body' => 'required',
+            'tags' => 'required|exists:tags,id|array',
         ]);
 
         if ($request->file('image')) {
@@ -60,7 +63,8 @@ class DashboardPostController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
-        Post::create($validatedData);
+        $post = Post::create($validatedData);
+        $post->tags()->attach($request->tags);
 
         return redirect('/dashboard/posts')->with('success', 'Post created successfully !');
     }

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Comment;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -28,7 +29,21 @@ class DatabaseSeeder extends Seeder
             'is_admin' => '1',
         ]);
 
-        User::factory(5)->create();
+        User::create([
+            'name' => 'Jurnal HIMATIF',
+            'username' => 'jurnal2022',
+            'email' => 'jurnal@unimal.ac.id',
+            'password' => bcrypt('jurnal2022'),
+        ]);
+
+        User::create([
+            'name' => 'INFOKOM HIMATIF',
+            'username' => 'infokom2022',
+            'email' => 'infokom@unimal.ac.id',
+            'password' => bcrypt('infokom2022'),
+        ]);
+
+        // User::factory(5)->create();
 
         Category::create([
             'name' => 'Pelatihan',
@@ -49,11 +64,36 @@ class DatabaseSeeder extends Seeder
             'name' => 'Seminar',
             'slug' => 'seminar',
         ]);
-        Category::factory(5)->create();
 
-        Post::factory(20)->create();
+        Tag::create([
+            'name' => 'Pelatihan',
+            'slug' => 'pelatihan',
+        ]);
+
+        Tag::create([
+            'name' => 'Webinar',
+            'slug' => 'webinar',
+        ]);
+
+        Tag::create([
+            'name' => 'Acara',
+            'slug' => 'acara',
+        ]);
+
+        Tag::create([
+            'name' => 'Seminar',
+            'slug' => 'seminar',
+        ]);
+
+        Tag::create([
+            'name' => 'Kegiatan',
+            'slug' => 'kegiatan',
+        ]);
+
+
+        // Post::factory(20)->create();
         Product::factory(10)->create();
 
-        Comment::factory(100)->create();
+        // Comment::factory(100)->create();
     }
 }

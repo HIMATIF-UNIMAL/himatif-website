@@ -48,10 +48,9 @@
                 
                 <div class="tag">
                   <i class="bi bi-tags"></i>Tags:
-                  <a href="" class="bg-light mx-1">#tech</a>  
-                  <a href="" class="bg-light mx-1">#teknologi</a>  
-                  <a href="" class="bg-light mx-1">#dies</a>  
-                  <a href="" class="bg-light mx-1">#dnv17</a>
+                  @foreach ($post->tags as $tag)
+                    <a href="/blog?tag={{ $tag->slug }}" class="bg-light mx-1">#{{ $tag->name }}</a>     
+                  @endforeach
                 </div>
               </div>
               <div class="share px-lg-5 my-4">

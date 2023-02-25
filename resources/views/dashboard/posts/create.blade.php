@@ -64,6 +64,16 @@
                   </div>
                 </div>
                 <div class="form-group row mb-4">
+                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tag</label>
+                  <div class="col-sm-12 col-md-7">
+                    <select class="form-control select2" multiple="" name="tags[]">
+                      @foreach ($tags as $tag)
+                        <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                      @endforeach
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="image">Gambar</label>
                   <div class="col-sm-12 col-md-7">
                     <img class="img-preview img-fluid mb-3 col-sm-5">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Comment;
 use stdClass;
@@ -32,6 +33,11 @@ class PostController extends Controller
             $title = ' mengenai ' . $category->name;
         }
 
+        if (request('tag')) {
+            $tag = Tag::firstwhere('slug', request('tag'));
+            $title = ' dengan tag ' . $tag->name;
+        }
+
         if (request('author')) {
             $author = User::firstwhere('username', request('author'));
             $title = ' dari ' . $author->name;
@@ -40,7 +46,7 @@ class PostController extends Controller
         return view('posts', [
             'title' => 'Semua Berita' . $title,
             'meta' => $this->meta,
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(4)
+            'posts' => Post::latest()->filter(request(['search', 'category', 'tag', 'author']))->paginate(4)
                 ->withQueryString()
         ]);
     }

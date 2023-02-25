@@ -34,6 +34,9 @@
               @if (request('category')) 
                   <input type="hidden" name="category" value="{{ request('category') }}">
               @endif
+              @if (request('tag')) 
+                  <input type="hidden" name="tag" value="{{ request('tag') }}">
+              @endif
               @if (request('author')) 
                   <input type="hidden" name="author" value="{{ request('author') }}">
               @endif
