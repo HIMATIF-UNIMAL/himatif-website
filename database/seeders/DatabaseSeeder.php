@@ -43,58 +43,58 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('infokom2022'),
         ]);
 
-        User::factory(5)->create();
+        // User::factory(5)->create();
 
-        Category::create([
-            'name' => 'Pelatihan',
-            'slug' => 'pelatihan',
-        ]);
+        // Category::create([
+        //     'name' => 'Pelatihan',
+        //     'slug' => 'pelatihan',
+        // ]);
 
-        Category::create([
-            'name' => 'Webinar',
-            'slug' => 'webinar',
-        ]);
+        // Category::create([
+        //     'name' => 'Webinar',
+        //     'slug' => 'webinar',
+        // ]);
 
-        Category::create([
-            'name' => 'Acara',
-            'slug' => 'acara',
-        ]);
+        // Category::create([
+        //     'name' => 'Acara',
+        //     'slug' => 'acara',
+        // ]);
 
-        Category::create([
-            'name' => 'Seminar',
-            'slug' => 'seminar',
-        ]);
+        // Category::create([
+        //     'name' => 'Seminar',
+        //     'slug' => 'seminar',
+        // ]);
 
-        Tag::create([
-            'name' => 'Pelatihan',
-            'slug' => 'pelatihan',
-        ]);
+        // Tag::create([
+        //     'name' => 'Pelatihan',
+        //     'slug' => 'pelatihan',
+        // ]);
 
-        Tag::create([
-            'name' => 'Webinar',
-            'slug' => 'webinar',
-        ]);
+        // Tag::create([
+        //     'name' => 'Webinar',
+        //     'slug' => 'webinar',
+        // ]);
 
-        Tag::create([
-            'name' => 'Acara',
-            'slug' => 'acara',
-        ]);
+        // Tag::create([
+        //     'name' => 'Acara',
+        //     'slug' => 'acara',
+        // ]);
 
-        Tag::create([
-            'name' => 'Seminar',
-            'slug' => 'seminar',
-        ]);
+        // Tag::create([
+        //     'name' => 'Seminar',
+        //     'slug' => 'seminar',
+        // ]);
 
-        Tag::create([
-            'name' => 'Kegiatan',
-            'slug' => 'kegiatan',
-        ]);
+        // Tag::create([
+        //     'name' => 'Kegiatan',
+        //     'slug' => 'kegiatan',
+        // ]);
 
-        Tag::factory(10)->create();
-        Category::factory(10)->create();
-        Post::factory(20)->create();
-        Product::factory(10)->create();
+        // Tag::factory(10)->create();
+        // Category::factory(10)->create();
+        // Post::factory(20)->create();
+        // Product::factory(10)->create();
 
-        Comment::factory(100)->create();
+        // Comment::factory(100)->create();
     }
 }
