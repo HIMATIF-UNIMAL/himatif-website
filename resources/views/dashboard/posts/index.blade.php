@@ -34,7 +34,7 @@
                         <th>Gambar</th>
                         <th>Kategori</th>
                         <th>Judul</th>
-                        <th>Views</th>
+                        <th>Tags</th>
                         <th>Komen</th>
                         <th>Action</th>
                         </tr>
@@ -57,7 +57,7 @@
                                 </td>
                                 <td>{{ $post->category->name ?? '' }}</td>
                                 <td>{{ $post->title }}</td>
-                                <td>0</td>
+                                <td>{{ $post->tags->count() }}</td>
                                 <td>{{ $post->comments->count() }}</td>
                                 <td>
                                     <div class="btn-group mb-3" role="group" aria-label="Basic example">

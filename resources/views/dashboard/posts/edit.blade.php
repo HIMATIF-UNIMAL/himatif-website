@@ -65,6 +65,21 @@
                   </div>
                 </div>
                 <div class="form-group row mb-4">
+                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tag</label>
+                  <div class="col-sm-12 col-md-7">
+                    <select class="form-control select2" multiple="" name="tags[]" required>
+                      @foreach ($tags->reverse() as $tag)
+                        <option value="{{ $tag->id }}" {{ in_array($tag->id, old('tags', $post->tags->pluck('id')->toArray())) ? 'selected' : '' }}>{{ $tag->name }}</option>
+                      @endforeach
+                    </select>
+                    @error('tags[]')
+                      <span class="invalid" role="alert">
+                        <small class="text-danger">{{ $message }}</small>
+                      </span>
+                    @enderror
+                  </div>
+                </div>
+                <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3" for="image">Gambar</label>
                   <input type="hidden" name="oldImage" value="{{ $post->image }}">
                   <div class="col-sm-12 col-md-7">

@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('infokom2022'),
         ]);
 
-        // User::factory(5)->create();
+        User::factory(5)->create();
 
         Category::create([
             'name' => 'Pelatihan',
@@ -90,10 +90,11 @@ class DatabaseSeeder extends Seeder
             'slug' => 'kegiatan',
         ]);
 
-
-        // Post::factory(20)->create();
+        Tag::factory(10)->create();
+        Category::factory(10)->create();
+        Post::factory(20)->create();
         Product::factory(10)->create();
 
-        // Comment::factory(100)->create();
+        Comment::factory(100)->create();
     }
 }

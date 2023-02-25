@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
-use Illuminate\Support\Facades\Route;
 
 class AdminCategoryController extends Controller
 {
@@ -17,7 +17,7 @@ class AdminCategoryController extends Controller
     public function index()
     {
         return view('dashboard.categories.index', [
-            'categories' => Category::latest()->paginate(5)
+            'categories' => Category::latest()->paginate(5),
         ]);
     }
 

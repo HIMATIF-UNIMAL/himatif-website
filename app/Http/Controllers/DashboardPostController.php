@@ -90,6 +90,7 @@ class DashboardPostController extends Controller
         return view('dashboard.posts.edit', [
             'post' => $post,
             'categories' => Category::all(),
+            'tags' => Tag::all(),
         ]);
     }
 
@@ -106,7 +107,8 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'category_id' => 'required|exists:categories,id',
             'image' => 'image|file|max:2048',
-            'body' => 'required'
+            'body' => 'required',
+            'tags' => 'nullable|array'
         ];
 
         if ($request->slug != $post->slug) {
@@ -125,7 +127,14 @@ class DashboardPostController extends Controller
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
-        Post::where('id', $post->id)->update($validatedData);
+        $post->update($validatedData);
+
+        // update tags
+        if ($request->tags) {
+            $post->tags()->sync($request->tags);
+        } else {
+            $post->tags()->detach();
+        }
 
         return redirect('/dashboard/posts')->with('success', 'Post updated successfully !');
     }

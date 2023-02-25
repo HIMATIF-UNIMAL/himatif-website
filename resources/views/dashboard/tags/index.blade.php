@@ -4,11 +4,11 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-        <h1>Kategori</h1>
+        <h1>Tags</h1>
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
             <div class="breadcrumb-item">Blog</div>
-            <div class="breadcrumb-item">Kategori</div>
+            <div class="breadcrumb-item">Tags</div>
         </div>
         </div>
         <div class="section-body">
@@ -16,14 +16,14 @@
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Tambah Kategori</h4>
+                        <h4>Tambah Tags</h4>
                         </div>
                         <div class="card-body">
-                            <form action="/dashboard/categories" method="post">
-                                @csrf
-                                <div class="form-group">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Jenis Kategori" id="name" name="name" required autofocus value="{{ old('name') }}">
+                        <form action="/dashboard/tags" method="post">
+                            @csrf
+                            <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Jenis Tag" id="name" name="name" required autofocus value="{{ old('name') }}">
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         {{ $message }}
@@ -40,14 +40,14 @@
                                     <div class="input-group-append">
                                     <button class="btn btn-success" type="submit"><i class="fas fa-plus"></i> Tambah</button>
                                     </div>
-                                </div>
-                                </div>
-                            </form>
+                            </div>
+                            </div>
+                        </form> 
                         </div>
                     </div>
                     <div class="card card-primary">
                         <div class="card-header">
-                        <h4>Kategori</h4>
+                        <h4>Tags</h4>
                         </div>
                         <div class="card-body">
                             @if (session('success'))
@@ -67,17 +67,17 @@
                                 </thead>
                                 <tbody>
                                     @php
-                                        $start = ($categories->currentPage() - 1) * $categories->perPage() + 1;
+                                        $start = ($tags->currentPage() - 1) * $tags->perPage() + 1;
                                     @endphp
-                                    @foreach ($categories as $category)
+                                    @foreach ($tags as $tag)
                                         <tr>
                                         <td>{{ $start++ }}</td>
-                                        <td>{{ $category->name }}</td>
-                                        <td>{{ $category->posts->count() }}</td>
+                                        <td>{{ $tag->name }}</td>
+                                        <td>{{ $tag->posts->count() }}</td>
                                         <td class="text-right">
                                             <div class="btn-group mb-3" role="group" aria-label="Basic example">
-                                            <a href="/dashboard/categories/{{ $category->slug }}/edit" type="button" class="btn btn-warning" ><i class="fas fa-pen-alt"></i></a>
-                                            <form action="/dashboard/categories/{{ $category->slug }}" method="post">
+                                            <a href="/dashboard/tags/{{ $tag->slug }}/edit" type="button" class="btn btn-warning" ><i class="fas fa-pen-alt"></i></a>
+                                            <form action="/dashboard/tags/{{ $tag->slug }}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></button>
@@ -88,7 +88,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{ $categories->appends(['start' => $start])->links() }}
+                            {{ $tags->appends(['start' => $start])->links() }}
                         </div>
                         </div>
                     </div>

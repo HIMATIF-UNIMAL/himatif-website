@@ -17,7 +17,8 @@ class TagFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->sentence(1),
+            'slug' => fake()->slug(1),
         ];
     }
 }

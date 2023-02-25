@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tag;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class AdminTagController extends Controller
 {
@@ -14,7 +16,9 @@ class AdminTagController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.tags.index', [
+            'tags' => Tag::latest()->paginate(5),
+        ]);
     }
 
     /**
@@ -35,7 +39,14 @@ class AdminTagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255|unique:tags',
+            'slug' => 'required|max:255|unique:tags',
+        ]);
+
+        Tag::create($validatedData);
+
+        return redirect()->route('tags.index')->with('success', 'Tag created successfully');
     }
 
     /**
@@ -57,7 +68,9 @@ class AdminTagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        return view('dashboard.tags.edit', [
+            'tag' => $tag,
+        ]);
     }
 
     /**
@@ -69,7 +82,14 @@ class AdminTagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255|unique:tags,name,' . $tag->id,
+            'slug' => 'required|max:255|unique:tags,slug,' . $tag->id,
+        ]);
+
+        $tag->update($validatedData);
+
+        return redirect()->route('tags.index')->with('success', 'Tag updated successfully');
     }
 
     /**
@@ -80,6 +100,14 @@ class AdminTagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
+
+        return redirect()->route('tags.index')->with('success', 'Tag deleted successfully');
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(Tag::class, 'slug', $request->name);
+        return response()->json(['slug' => $slug]);
     }
 }

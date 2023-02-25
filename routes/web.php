@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminCategoryController;
+use App\Http\Controllers\AdminTagController;
 use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\ProductController;
 
@@ -67,7 +68,7 @@ Route::resource('/dashboard/posts', DashboardPostController::class)->middleware(
 Route::get('dashboard/categories/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/categories', AdminCategoryController::class)->except('show')->middleware('admin');
 
-Route::get('dashboard/tags/checkSlug', [AdminCategoryController::class, 'checkSlug'])->middleware('auth');
-Route::resource('/dashboard/tags', AdminCategoryController::class)->except('show')->middleware('admin');
+Route::get('dashboard/tags/checkSlug', [AdminTagController::class, 'checkSlug'])->middleware('auth');
+Route::resource('/dashboard/tags', AdminTagController::class)->except('show')->middleware('admin');
 
 Route::resource('/dashboard/products', DashboardProductController::class)->middleware('auth');
