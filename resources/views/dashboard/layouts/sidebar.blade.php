@@ -26,7 +26,7 @@
                 <li><a class="nav-link" href="#">IPTEK dan Kajian Ilmiah</a></li>
             </ul>
             </li> --}}
-            <li class="nav-item dropdown {{ Request::is('dashboard/posts*') || Request::is('dashboard/categories*') || Request::is('dashboard/tags*') ? 'active' : '' }}">
+            <li class="nav-item dropdown {{ Request::is('dashboard/posts*') || Request::is('dashboard/categories*') || Request::is('dashboard/tags*') || Request::is('dashboard/comments*') ? 'active' : '' }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-newspaper"></i> <span>Blog</span></a>
             <ul class="dropdown-menu">
                 @can('admin')
@@ -35,7 +35,7 @@
                 @endcan
                 <li class="{{ Request::is('dashboard/posts/create') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
                 <li class="{{ Request::is('dashboard/posts') || Request::is('dashboard/posts/*/edit') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
-                <li><a class="nav-link" href="#">Komentar</a></li>
+                <li class="{{ Request::is('dashboard/comments') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/comments">Komentar</a></li>
             </ul>
             </li>
             {{-- <li class="nav-item dropdown">

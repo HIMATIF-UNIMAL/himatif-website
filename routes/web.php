@@ -3,16 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DivisiController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\GaleryController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\AdminCategoryController;
 use App\Http\Controllers\AdminTagController;
+use App\Http\Controllers\AdminCommentController;
 use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\ProductController;
 
@@ -70,5 +69,7 @@ Route::resource('/dashboard/categories', AdminCategoryController::class)->except
 
 Route::get('dashboard/tags/checkSlug', [AdminTagController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/tags', AdminTagController::class)->except('show')->middleware('admin');
+
+Route::resource('/dashboard/comments', AdminCommentController::class)->middleware('auth');
 
 Route::resource('/dashboard/products', DashboardProductController::class)->middleware('auth');
