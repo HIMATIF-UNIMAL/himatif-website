@@ -16,6 +16,7 @@ class DashboardProductController extends Controller
     public function index()
     {
         return view('dashboard.products.index', [
+            'title' => 'Products',
             'products' => Product::latest()->paginate(5)
         ]);
     }
@@ -27,7 +28,9 @@ class DashboardProductController extends Controller
      */
     public function create()
     {
-        return view('dashboard.products.create');
+        return view('dashboard.products.create', [
+            'title' => 'Create Product'
+        ]);
     }
 
     /**
@@ -76,6 +79,7 @@ class DashboardProductController extends Controller
     public function edit(Product $product)
     {
         return view('dashboard.products.edit', [
+            'title' => 'Edit Product',
             'product' => $product
         ]);
     }

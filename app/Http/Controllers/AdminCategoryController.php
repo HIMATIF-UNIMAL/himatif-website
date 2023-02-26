@@ -17,6 +17,7 @@ class AdminCategoryController extends Controller
     public function index()
     {
         return view('dashboard.categories.index', [
+            'title' => 'Categories',
             'categories' => Category::latest()->paginate(5),
         ]);
     }
@@ -69,6 +70,7 @@ class AdminCategoryController extends Controller
     public function edit(Category $category)
     {
         return view('dashboard.categories.edit', [
+            'title' => 'Edit Category',
             'category' => $category
         ]);
     }

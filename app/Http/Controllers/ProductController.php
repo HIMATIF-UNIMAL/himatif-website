@@ -26,7 +26,6 @@ class ProductController extends Controller
         return view('toko', [
             'title' => 'HIMATIF UNIMAL Shop',
             'meta' => $this->meta,
-            'active' => 'toko',
             'products' => Product::latest()->paginate(8)
         ]);
     }

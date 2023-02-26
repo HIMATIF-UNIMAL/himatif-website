@@ -4,14 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use stdClass;
 
 class LoginController extends Controller
 {
+    public $meta;
+
+    public function __construct()
+    {
+        $this->meta = new stdClass();
+        $this->meta->keywords = 'login himatif unimal, login himatif, himatif unimal, himatif, unimal';
+        $this->meta->author = 'IPTEK HIMATIF UNIMAL';
+        $this->meta->description = 'Login Himpunan Mahasiswa Teknik Informatika Universitas Malikussaleh.';
+        $this->meta->url = 'https://himatif.unimal.ac.id/login';
+        $this->meta->type = 'login';
+        $this->meta->image = 'https://himatif.unimal.ac.id/img/logo.png';
+    }
     public function index()
     {
         return view('login.index', [
-            'title' => "Login",
-            'active' => 'login'
+            'meta' => $this->meta,
+            'title' => "Halaman Login Website",
         ]);
     }
 
@@ -19,7 +32,7 @@ class LoginController extends Controller
     {
         $credentials = $request->validate([
             'username' => 'required|alpha_dash|max:255',
-            'password' => 'required',
+            'password' => 'required|alpha_dash|max:255',
         ]);
 
         if (Auth::attempt($credentials)) {

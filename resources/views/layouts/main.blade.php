@@ -15,15 +15,15 @@
   <meta property="og:description" content="{{ $meta->description ?? '' }}" />
   
   <title>{{ $title }} - HIMATIF UNIMAL</title>
-  <link rel="icon" type="image/x-icon" href="{{ url('img/logo.png') }}">
+  <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ url('css/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ url('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-  <link rel="stylesheet" href="{{ url('css/justifiedGallery.css') }}">
-  <link rel="stylesheet" href="{{ url('css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/justifiedGallery.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
   <!-- =======================================================
   * Developed By: IPTEK HIMATIF UNIMAL 2022
@@ -45,8 +45,8 @@
   <a href="#" class="back-to-top btn btn-success d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{{ url('js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url('js/list.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('js/list.min.js') }}"></script>
   <script> 
   var monkeyList = new List('test-list', { 
     valueNames: ['name']
@@ -54,13 +54,13 @@
   </script>
 
   <!-- _Template Main JS File_ -->
-  <script src="{{ url('js/main.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 
   <!-- Js Library for galery -->
-  <script src="{{ url('js/jquery-3.6.0.min.js') }}"></script>
-  <script src="{{ url('js/jquery.justifiedGallery.js') }}"></script>
-  <script src="{{ url('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.justifiedGallery.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 
   <script>
     $('#susunan').justifiedGallery({

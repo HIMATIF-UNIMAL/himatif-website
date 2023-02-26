@@ -17,6 +17,7 @@ class AdminTagController extends Controller
     public function index()
     {
         return view('dashboard.tags.index', [
+            'title' => 'Tags',
             'tags' => Tag::latest()->paginate(5),
         ]);
     }
@@ -69,6 +70,7 @@ class AdminTagController extends Controller
     public function edit(Tag $tag)
     {
         return view('dashboard.tags.edit', [
+            'title' => 'Edit Tag',
             'tag' => $tag,
         ]);
     }
