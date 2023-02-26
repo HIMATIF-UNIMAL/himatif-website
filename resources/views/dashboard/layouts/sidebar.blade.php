@@ -35,7 +35,7 @@
                 @endcan
                 <li class="{{ Request::is('dashboard/posts/create') ? 'active' : ''}}"><a class="nav-link" href="/dashboard/posts/create">Tambah Post</a></li>
                 <li class="{{ Request::is('dashboard/posts') || Request::is('dashboard/posts/*/edit') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/posts">Post</a></li>
-                <li class="{{ Request::is('dashboard/comments') ? 'active' : '' }}"><a class="nav-link" href="/dashboard/comments">Komentar</a></li>
+                <li class="{{ Request::is('dashboard/comments') || Request::is('dashboard/comments/*/edit')  ? 'active' : '' }}"><a class="nav-link" href="/dashboard/comments">Komentar</a></li>
             </ul>
             </li>
             {{-- <li class="nav-item dropdown">

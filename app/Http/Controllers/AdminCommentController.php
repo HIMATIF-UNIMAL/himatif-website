@@ -60,7 +60,10 @@ class AdminCommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view('dashboard.comments.edit', [
+            'title' => 'Edit Comment',
+            'comment' => $comment,
+        ]);
     }
 
     /**
@@ -72,7 +75,16 @@ class AdminCommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'body' => 'required|max:255',
+        ]);
+
+        Comment::where('id', $comment->id)
+            ->update($validatedData);
+
+        return redirect()->route('comments.index')->with('success', 'Comment updated successfully.');
     }
 
     /**
@@ -83,6 +95,7 @@ class AdminCommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        Comment::destroy($comment->id);
+        return redirect()->route('comments.index')->with('success', 'Comment deleted successfully.');
     }
 }
