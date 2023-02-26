@@ -11,7 +11,7 @@ class Post extends Model
     use HasFactory, Sluggable;
 
     protected $guarded = ['id'];
-    protected $with = ['author', 'category'];
+    protected $with = ['author', 'category', 'tags'];
 
     public function scopeFilter($query, array $filters)
     {
@@ -23,6 +23,12 @@ class Post extends Model
         $query->when($filters['category'] ?? false, function ($query, $category) {
             return $query->whereHas('category', function ($query) use ($category) {
                 $query->where('slug', $category);
+            });
+        });
+
+        $query->when($filters['tag'] ?? false, function ($query, $tag) {
+            return $query->whereHas('tags', function ($query) use ($tag) {
+                $query->where('slug', $tag);
             });
         });
 
