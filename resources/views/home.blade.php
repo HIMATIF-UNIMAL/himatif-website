@@ -196,26 +196,30 @@
             <div class="card-body p-lg-5">
               <div class="row">
                 <div class="col-lg-6 mb-5">
-                  <form role="form" method="post">
+                  <form action="/contact" method="post">
+                    @csrf
                     <h3>Kontak Kami</h3>
                     <div class="row g-2 mt-4 mb-3">
                       <div class="col-md">
-                        <label for="formGroupExampleInput" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" name="nama" placeholder="Nama" required="">
+                        <label for="name" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nama" required>
                       </div>
                       <div class="col-md">
-                        <label for="formGroupExampleInput" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="formGroupExampleInput" name="email" placeholder="Email" required="">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label for="formGroupExampleInput" class="form-label">Subjek</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" name="subject" placeholder="Subjek" required="">
+                      <label for="subject" class="form-label">Subjek</label>
+                      <input type="text" class="form-control" id="subject" name="subject" placeholder="Subjek" required>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-                      <pre><textarea class="form-control" id="exampleFormControlTextarea1" name="pesan" rows="3" placeholder="Tulis Pesan Anda ..." required=""></textarea></pre>
+                      <label for="message" class="form-label">Pesan</label>
+                      <pre><textarea class="form-control" id="message" name="message" rows="3" placeholder="Tulis Pesan Anda ..." required></textarea></pre>
                     </div>
+                    @if(Session::has('status'))
+                      <div class="alert alert-success">{{ Session::get('status') }}</div>
+                    @endif
                     <div class="d-grid gap-2">
                       <button class="btn btn-success text-light mt-5" name="kirim" type="submit">Kirim</button>
                     </div>
