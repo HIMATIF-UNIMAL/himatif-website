@@ -7,7 +7,8 @@
 3. Create `.env` file by simply copying the `.env.example` file and rename it.
 4. Configure the `.env` file with your **database connection**, **seeder configuration**, etc.
 5. Generate the application key with `php artisan key:generate` command.
-6. Generate the database structure with this commands based on your preferences:
+6. Generate the storage link with `php artisan storage:link` command.
+7. Generate the database structure with this commands based on your preferences:
     - Use **`php artisan migrate`** for [creating / updating the database](https://laravel.com/docs/9.x/migrations).
     - Use **`php artisan db:seed`** for [seeding the database](https://laravel.com/docs/9.x/seeding#running-seeders).
     - Use `php artisan migrate:fresh` for fresh installation.
